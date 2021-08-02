@@ -1,0 +1,31 @@
+[[headers]]
+  for = "/*" # This defines which paths this specific [[headers]] block will cover.
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "same-origin"
+    X-Content-Type-Options = "nosniff"
+    Cache-Control = "max-age=2678400, public"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    Content-Security-Policy = '''
+    default-src 'self' https://avatars1.githubusercontent.com cdnjs.cloudflare.com fonts.googleapis.com cloudfront.net *.cloudfront.net https://placehold.it;
+    base-uri 'self';
+    child-src 'self' https://app.netlify.com;
+    font-src 'self' https://fonts.gstatic.com;
+    form-action 'self';
+    frame-ancestors 'none';
+    img-src 'self' https://avatars1.githubusercontent.com https://placehold.it https://demainilpleut.goatcounter.com/count cloudfront.net *.cloudfront.net;
+    manifest-src 'self';
+    media-src 'none';
+    object-src 'self';
+    script-src 'self' cdnjs.cloudflare.com  https://gc.zgo.at/count.js cloudfront.net *.cloudfront.net https://netlify-cdp-loader.netlify.app 'unsafe-inline';
+    style-src 'self' fonts.googleapis.com cloudfront.net *.cloudfront.net 'unsafe-inline';
+    worker-src 'self';'''
+[[headers]]
+  for = "images/*"
+  [headers.values]
+    Cache-Control = "max-age=604800, public"
+[[headers]]
+  for = "assets/*"
+  [headers.values]
+    Cache-Control = "max-age=604800, public"

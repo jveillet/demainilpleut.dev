@@ -1,0 +1,67 @@
+/**
+Name: archive.scss
+Description: Archives section styles
+*/
+
+.archives-spacing {
+  margin-bottom: 2em;
+}
+
+.archives-return-link {
+  margin-top: 1em;
+}
+
+.archives-complement {
+  margin-left: .5em;
+  font-size: .8em;
+  color: var(--main-text-color);
+}
+
+.archives-header {
+  margin-bottom: 3em;
+}
+
+.breadcrumb-icon {
+  background: var(--breadcrumb-icon),
+    linear-gradient(transparent, transparent);
+  background-size: auto 1.5em;
+  display: block;
+  padding: .5em 1.5em .5em 1em;
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: row;
+  /* This aligns items to the end line on main-axis */
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.archives-breadcrumb {
+  margin-left: 1em;
+}
+
+.breadcrumb-active {
+  margin-left: 1em;
+}
+
+.breadcrumb-item a:link,
+.breadcrumb-item a:visited {
+  text-decoration: none;
+  color: var(--breadcrumb-color);
+}
+
+.breadcrumb-item a:hover {
+  text-decoration: underline;
+  color: var(--breadcrumb-hover-color);
+}
+
+.archives-link a:link,
+.archives-link a:hover {
+  color: var(--archives-link-color);
+}
+
+.archives-link a:visited {
+  color: var(--archives-link-visited-color);
+}

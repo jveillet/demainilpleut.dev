@@ -1,0 +1,48 @@
+---
+layout: default
+---
+
+<div class="page">
+
+  {% assign this_year = page.date | date: "%Y" %}
+
+  <div class="archives-breadcrumb">
+    <div class="breadcrumbs">
+      <div class="breadcrumb-item"><a href="{{ 'archives' | relative_url }}" class="breadcrumb-icon">Archives</a></div>
+      <div class="breadcrumb-item"><a href="{{ 'archives/'| append: this_year | relative_url }}" class="breadcrumb-icon">{{ this_year }}</a></div>
+      <div class="breadcrumb-item breadcrumb-active">{{ page.date | date: "%B" }}</div>
+    </div>
+  </div>
+
+  <div class="posts">
+    {% for post in page.posts %}
+    <!-- Look the author details up from the site config. -->
+    {% assign author = site.data.authors[post.author] %}
+    <article class="articles">
+      <h2><a href="{{ post.url | relative_url }}" class="article-title">{{ post.title }}</a></h2>
+      <div class="article-excerpt">
+        {{ post.excerpt | strip_html }}
+      </div>
+      <div class="articles-footer">
+        <div class="articles-footer-wrapper">
+          <img src="{{ author.avatar }}" width="32" height="32" alt="{{ author.name }}" class="articles-footer-avatar">
+          <span class="article-author"><a class="article-author--link" href="{{ 'authors/' | append: author.handle | relative_url }}">{{ author.name }}</a></span>
+          <span class="article-pubdate"> on <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %d, %Y' }}</time></span>
+          <div class="articles-footer-tags">
+            {% for category in post.categories %}
+            {% assign cat = category | downcase | replace: ' ', '-' %}
+            <span class="article-tags-item">
+              <a href="{{ 'archives/' | append: cat | relative_url  }}" class="article-tags-link">#{{ category }}</a>
+            </span>
+            {% endfor %}
+          </div><!-- end of articles footer tags -->
+        </div><!-- end of articles footer wrapper -->
+      </div><!-- end of articles footer -->
+    </article>
+    {% endfor %}
+  </div>
+
+  <div class="article-top">
+    <a href="#top" class="top" title="Go to the top of the page">↑ Back to top</a>
+  </div>
+</div><!-- End of page -->

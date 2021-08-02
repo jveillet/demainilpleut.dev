@@ -1,0 +1,322 @@
+@charset "UTF-8";
+/**
+Name: style.css
+Github URI: https://github.com/jveillet/jk-demainilpleut
+Author: Jérémie Veillet
+Author URI: https://github.com/jveillet
+Description: Base styles for demain·il·pleut
+Version: 3.3.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+This stylesheet is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/*   Base styles: opinionated defaults */
+
+:root {
+  --white-500: #ffffff;
+  --white-400: #fcfcfc;
+
+  --black-500: #121212;
+  --black-400: #4d4d4d;
+  --black-300: #858585;
+  --black-200: #bfbfbf;
+
+  --blue-50: #e0eef7;
+  --blue-100: #b3d4eb;
+  --blue-200: #80b8de;
+  --blue-300: #4d9cd0;
+  --blue-400: #2686c6;
+  --blue-500: #0071bc;
+  --blue-600: #0069b6;
+  --blue-700: #005ead;
+  --blue-800: #0054a5;
+  --blue-900: #004297;
+  --blue-A100: #c2d8ff;
+  --blue-A200: #8fb7ff;
+  --blue-A400: #5c97ff;
+  --blue-A700: #4287ff;
+
+  --orange-500: #f27935;
+  --red-500: #ff000f;
+
+  /* Article tags */
+  --tags-bg-color: var(--blue-100);
+  --tags-color: var(--blue-900);
+  --tags-hover-bg-color: var(--blue-900);
+  --tags-hover-color: var(--blue-100);
+}
+
+:root[data-theme = "light"] {
+  --main-text-color: var(--black-500);
+  --main-background-color: var(--white-400);
+  --main-section-title-color: var(--blue-700);
+
+  --footer-background-color: var(--blue-50);
+  --footer-hashtag-color: var(--blue-900);
+  --footer-column-title-color: var(--blue-900);
+
+  --alert-bg-color: var(--white-400);
+  --breadcrumb-icon: url("/images/icon-breadcrumb.svg") no-repeat right center;
+
+
+  --articles-separator-color: var(--blue-50);
+  --articles-title-color: var(--black-500);
+  --articles-excerpt-color: var(--black-400);
+  --articles-pubdate-color: var(--black-400);
+  --articles-readingtime-color: var(--black-400);
+  --articles-first-letter-color: var(--blue-500);
+  --articles-primary-link-color: var(--blue-500);
+  --articles-primary-link-visited-color: var(--blue-900);
+
+  --pagination-current-color: var(--blue-600);
+  --pagination-link-color: var(--main-text-color);
+  --pagination-link-hover-color: var(--blue-500);
+
+  --styleguide-colors-text-color: var(--white-400);
+
+  --button-primary-background-color: var(--blue-500);
+  --button-primary-color: var(--white-400);
+
+  --topbar-logo: url("/images/logo.svg") no-repeat left center;
+  --topbar-background-color: var(--white-400);
+  --topbar-navigation-item-color: var(--black-400);
+  --topbar-link-color: var(--blue-500);
+
+  --members-articles-count-color: var(--blue-500);
+
+  --archives-link-color: var(--blue-500);
+  --archives-link-visited-color: var(--blue-900);
+
+  --breadcrumb-color: var(--main-text-color);
+  --breadcrumb-hover-color: var(--blue-500);
+
+  --quote-border-color: var(--blue-500);
+  --code-background-color: var(--blue-100);
+  --code-color: var(--blue-800);
+}
+
+:root[data-theme = "dark"]  {
+  --main-text-color: var(--white-400);
+  --main-background-color: var(--black-500);
+  --main-section-title-color: var(--blue-200);
+
+  --footer-background-color: rgba(255, 255, 255, .1);
+  --footer-hashtag-color: var(--blue-200);
+
+  --alert-bg-color: rgba(255, 255, 255, .2);
+  --breadcrumb-icon: url("/images/icon-breadcrumb-light.svg") no-repeat right center;
+  --topbar-logo: url("/images/logo-light.svg") no-repeat left center;
+
+  --articles-separator-color: rgba(255, 255, 255, .2);
+  --articles-title-color: var(--white-400);
+  --articles-excerpt-color: var(--black-200);
+  --articles-pubdate-color: var(--black-200);
+  --articles-readingtime-color: var(--black-200);
+  --articles-first-letter-color: var(--blue-200);
+  --articles-primary-link-color: var(--white-400);
+  --articles-primary-link-visited-color: var(--blue-600);
+
+  --pagination-current-color: var(--blue-300);
+  --pagination-link-color: var(--main-text-color);
+  --pagination-link-hover-color: var(--blue-200);
+
+  --styleguide-colors-text-color: var(--white-400);
+
+  --button-primary-background-color: var(--blue-600);
+  --button-primary-color: var(--white-400);
+
+  --topbar-background-color: rgba(255, 255, 255, .1);
+  --topbar-navigation-item-color: var(--black-200);
+  --topbar-link-color: var(--blue-200);
+
+  --members-articles-count-color: var(--blue-200);
+
+  --archives-link-color: var(--blue-200);
+  --archives-link-visited-color: var(--blue-400);
+
+  --breadcrumb-color: var(--main-text-color);
+  --breadcrumb-hover-color: var(--blue-200);
+
+  --quote-border-color: var(--blue-200);
+  --code-background-color: var(--blue-100);
+  --code-color: var(--blue-800);
+}
+
+/* Box sizing rules */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  text-size-adjust: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  border: 0;
+  background-color: var(--main-background-color);
+  color: var(--main-text-color);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  text-rendering: optimizeSpeed;
+}
+
+[aria-hidden = "true"],
+[data-a11y-toggle]:not([aria-controls]) {
+  display: none;
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+
+  html,
+  body {
+    scroll-behavior: smooth;
+  }
+
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Remove default margin */
+
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+header,
+footer,
+nav,
+section,
+article,
+hgroup,
+figure {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+h1 {
+  line-height: calc(1ex / .42);
+  margin: calc(1ex / .42) 0;
+}
+
+h2 {
+  line-height: calc(1ex / .42);
+  margin: calc(1ex / .42) 0;
+}
+
+h3 {
+  line-height: calc(1ex / .38);
+  margin: calc(1ex / .38) 0;
+}
+
+h4 {
+  font-size: 1.5em;
+  line-height: calc(1ex / .37);
+  margin: calc(1ex / .37) 0;
+}
+
+p {
+  line-height: calc(1ex / .32);
+}
+
+button:focus {
+  outline: thin dotted;
+}
+
+a, b, strong, dt {
+  font-weight: 600;
+}
+
+@supports (font-size-adjust: 1) {
+
+  article {
+    font-size-adjust: .5;
+  }
+
+}
+
+.responsive-image {
+  display: block;
+  max-width: 100%;
+  border-radius: 2%;
+}
+
+@media (min-width: 30em) {
+
+  .responsive-image {
+    max-width: 31.25em;
+  }
+
+}
+
+@media (min-width: 50em) {
+
+  .responsive-image {
+    max-width: 46.875em;
+  }
+
+}
+
+@media (min-width: 70em) {
+
+  .responsive-image {
+    max-width: 62.5em;
+  }
+
+}
+
+@media (prefers-color-scheme: dark) {
+
+  img {
+    filter: brightness(.8) contrast(1.2);
+  }
+
+}
+
+@import "./utilities";
+@import "./alert";
+@import "./button";
+@import "./post";
+@import "./pagination";
+@import "./archive";
+@import "./author";
+@import "./footer";
+@import "./styleguide";
+@import "./topbar";
+
+@import "./prism.min.css";

@@ -1,0 +1,24 @@
+<div class="topbar">
+  {% if bridgetown.environment == 'production' %}
+  <div class="topbar-logo">
+    <a href="/" class="topbar-logo-url">{{site.metadata.title}}</a>
+  </div><!-- end of topBar logo -->
+  {% else %}
+  <div class="topbar-logo-dev">
+    <a href="/" class="topbar-logo-url">{{site.metadata.title}}</a>
+  </div><!-- end of topBar logo -->
+  {% endif %}
+  <div class="topbar-menu">
+    <button class="btn btn--small btn--primary topbar-menu-btn">Menu</button>
+    <nav id="js-menu" role="navigation" class="topbar-navigation">
+      <ul class="list-unstyled">
+        <li><button class="js-theme-toggle btn--primary" aria-label="Switch to dark theme">🌞</button></li>
+        <li><a href="/" class="page-home topbar-navigation-item">Articles</a></li>
+        <li><a href="{% link _pages/archives.html %}" class="page-archives topbar-navigation-item">Archives</a></li>
+        <li><a href="{% link _pages/authors.html %}" class="page-authors topbar-navigation-item">Authors</a></li>
+        <li><a href="{% link _pages/styleguide.html %}" class="page-styleguide topbar-navigation-item">Styleguide</a></li>
+      </ul>
+      <button class="btn btn--round btn--primary topbar-btn-close" name="Close menu" type="button">X</button>
+    </nav><!-- end of topBarNavigation -->
+  </div><!-- end of topBarMenu -->
+</div><!-- end of topBar -->

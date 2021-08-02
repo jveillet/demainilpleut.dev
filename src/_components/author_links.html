@@ -1,0 +1,32 @@
+<ul class="social list-unstyled">
+  {% if author.web %}
+    <li class="social-item"><a href="{{ author.web.link }}" class="social-web primary-link">{{ author.web.handle }}</a></li>
+  {% endif %}
+  {% if author.twitter %}
+  <li class="social-item"><a href="https://www.twitter.com/{{ author.twitter }}" class="social-twitter primary-link">@{{ author.twitter }}</a></li>
+  {% endif %}
+  {% if author.linkedin %}
+  <li class="social-item"><a href="https://www.linkedin.com/in/{{ author.linkedin }}" class="social-linkedin primary-link">{{ author.linkedin }}</a></li>
+  {% endif %}
+  {% if author.github %}
+  <li class="social-item"><a href="https://www.github.com/{{ author.github }}" class="social-github primary-link">@{{ author.github }}</a></li>
+  {% endif %}
+  {% if author.gitlab %}
+  <li class="social-item"><a href="https://www.gitlab.com/{{ author.gitlab }}" class="social-gitlab primary-link">@{{ author.gitlab }}</a></li>
+  {% endif %}
+   {% if author.facebook %}
+  <li class="social-item"><a href="https://www.facebook.com/{{ author.facebook }}" class="social-facebook primary-link">{{ author.facebook }}</a></li>
+  {% endif %}
+  {% if author.mastodon %}
+  <li class="social-item"><a href="https://mastodon.social/@{{ author.mastodon }}" class="social-mastodon primary-link">@{{ author.mastodon }}</a></li>
+  {% endif %}
+  {% if author.slack %}
+  <li class="social-item"><a href="https://{{ author.slack }}.slack.com" class="social-slack primary-link">{{ author.slack }}.slack.com</a></li>
+  {% endif %}
+  {% if author.instagram %}
+  <li class="social-item"><a href="https://www.instagram.com/{{ author.instagram }}" class="social-instagram primary-link">{{ author.instagram }}</a></li>
+  {% endif %}
+  {% if author.devto %}
+  <li class="social-item"><a href="https://dev.to/{{ author.devto }}" class="social-devto primary-link">@{{ author.devto }}</a></li>
+  {% endif %}
+</ul>

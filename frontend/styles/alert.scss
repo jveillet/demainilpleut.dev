@@ -1,0 +1,22 @@
+/**
+Name: alert.scss
+Description: Styles for alert boxes
+*/
+
+.alert {
+  padding: .5em;
+  background-color: var(--alert-bg-color);
+  box-shadow: 0 .25em .375em 0 hsla(0, 0%, 0%, .2);
+}
+
+.alert--info {
+  border-left: .5em solid var(--blue-300);
+}
+
+.alert--warning {
+  border-left: .5em solid var(--orange-500);
+}
+
+.alert--danger {
+  border-left: .5em solid var(--red-500);
+}

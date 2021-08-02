@@ -1,0 +1,53 @@
+---
+layout: default
+---
+
+<!-- Look the author details up from the site config. -->
+{% assign author = site.data.authors[page.author] %}
+
+{% capture words %}
+  {{ page.content | number_of_words | minus: 250 }}
+{% endcapture %}
+
+<div class="article-wrapper">
+
+  <article class="article">
+  <h1 class="article-title">{{ page.title }}</h1>
+    <div class="author-grid">
+      <div class="author-avatar-area">
+        <img src="{{ author.avatar }}" width="80" height="80" alt="{{ author.name }}" class="article-author-avatar">
+      </div>
+      <div class="author-name-area">
+        <div class="author-name-header">Author</div>
+        {% assign author_url = 'authors/' | append: author.handle %}
+        <a class="author-name article-author--link" href="{{ author_url | relative_url }}">{{ author.name }}</a>
+      </div>
+      <div class="published">
+        <div class="published-header">Published</div>
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %d, %Y' }}</time>
+      </div>
+      <div class="reading-area">
+        <div class="reading-header">Reading time</div>
+        <span class="reading-time">
+        {% unless words contains "-" %}
+          {{ words | plus: 250 | divided_by: 180 | append: " minute(s)" | prepend: '~ ' }}
+        {% endunless %}
+        </span>
+      </div>
+    </div><!-- End of author-grid -->
+    <div class="article-tags">
+      {% for category in page.categories %}
+        <span class="article-tags-item">
+          {% assign cat = category | downcase | replace: ' ', '-' %}
+          <a href="{{ 'archives/' | append: cat | relative_url }}" class="article-tags-link">#{{ category }}</a>
+        </span>
+      {% endfor %}
+    </div>
+    <div class="article-content">
+      {{ content }}
+    </div>
+    <div class="article-top">
+      <a href="#top" class="top" title="Go to the top of the page">↑ Back to top</a>
+    </div>
+  </article>
+</div>

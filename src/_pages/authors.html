@@ -1,0 +1,53 @@
+---
+layout: default
+permalink: /authors/
+---
+
+<article class="page page-author">
+  <h1>Authors</h1>
+  <div class="article-excerpt">Here is all the beautifull people that are contributing to this blog.</div>
+
+  <div class="members-list">
+    {% for author in site.data.authors %}
+    {% assign member = author[1] %}
+    {% if member.display == false %}
+      {% continue %}
+    {% endif %}
+    <div class="member">
+      <div class="member-avatar">
+        <a href="{{ member.permalink | relative_url }}">
+          <img src="{{ member.avatar }}" class="avatar avatar--size" alt="{{ member.name }}">
+        </a>
+      </div><!-- End of member-avatar -->
+      <div class="member-links">
+        {% if member.twitter %}
+        <a href="https://www.twitter.com/{{ member.twitter }}">
+          <img src="/images/twitter.svg" width="32" height="32" alt="Twitter: @{{ member.twitter }}">
+        </a>
+        {% endif %}
+        {% if member.web.link %}
+        <a href="{{ member.web.link }}">
+          <img src="/images/icon-web.svg" width="32" height="32" alt="Personal website: {{ member.web.handle }}">
+        </a>
+        {% endif %}
+      </div><!-- End of member-links -->
+      <div class="member-name">
+        <div><a href="{{ member.permalink | relative_url }}" class="primary-link">{{ member.name }}</a></div>
+      </div><!-- End of member-name -->
+      <div class="member-bio">
+        <div class="article-excerpt">{{ member.description | truncate: 250, "..." }}</div>
+      </div><!-- End of member-bio -->
+      <div class="member-articles">
+        {% assign counter = 0 %}
+        {% for post in site.posts %}
+          {% if member.handle == post.author %}
+            {% assign counter = counter | plus: 1 %}
+          {% endif %}
+        {% endfor %}
+        <span class="members-articles-count">{{ counter }}</span>
+        Articles
+      </div><!-- End of member-articles -->
+    </div><!-- End of member -->
+    {% endfor %}
+  </div><!-- End of members-list -->
+</article>

@@ -1,0 +1,19 @@
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.metadata.title }}, {{ site.metadata.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.metadata.myvariable }}.
+
+title: demain·il·pleut
+tagline: Coding & Design for the rainy days
+email: jveillet@hey.com
+description:
+logo: images/logo.png
+canonical_url: https://www.demainilpleut.dev
+
+image_url: images/posts
+sizes: '(min-width: 70em) 1000px, (min-width: 50em) 750px, (min-width: 31.5em) 500px, 100vw'
+srcset:
+  - 500
+  - 750
+  - 1000
