@@ -1,0 +1,58 @@
+/**
+Name: pagination.scss
+Description: pagination styles
+*/
+
+.pagination {
+  padding-bottom: 1em;
+  text-align: center;
+}
+
+.pagination-wrapper {
+  display: inline-block;
+}
+
+.page-numbers {
+  overflow: hidden;
+}
+
+.page-numbers li {
+  border-right: .125em solid var(--articles-separator-color);
+  float: left;
+  font-weight: bold;
+  height: 1.6rem;
+  margin-bottom: .5em;
+  padding: 0 1em;
+}
+
+.page-numbers li:last-child {
+  border: none;
+}
+
+.page-numbers .current {
+  color: var(--pagination-current-color);
+  background: none;
+}
+
+.page-numbers a:link,
+.page-numbers a:visited {
+  text-decoration: none;
+  color: var(--pagination-link-color);
+}
+
+.page-numbers a:hover {
+  text-decoration: underline;
+  color: var(--pagination-link-hover-color);
+}
+
+@media all and (min-width: 47em) {
+
+  .page-numbers li {
+    border-right: .125em solid var(--articles-separator-color);
+    float: left;
+    font-weight: bold;
+    height: 1.6rem;
+    padding: 0 1em;
+  }
+
+}

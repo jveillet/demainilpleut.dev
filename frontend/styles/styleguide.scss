@@ -1,0 +1,138 @@
+/**
+Name: styleguide.scss
+Description: Styleguide specific  styles
+*/
+
+.patterns {
+  margin-top: 1em;
+}
+
+.pattern {
+  margin-top: 2em;
+}
+
+.pattern-item {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.pattern-item article {
+  margin: 0;
+  padding: 0;
+}
+
+.colors {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+  align-content: flex-end;
+}
+
+.color {
+  width: 6em;
+  height: 6em;
+  text-align: center;
+  margin: 1em;
+  border-radius: 100%;
+  border: .0625em solid var(--black-200);
+}
+
+.color-text {
+  font-size: .85em;
+  font-weight: 700;
+  width: 100%;
+  margin-top: 45%;
+  color: var(--black-500);
+}
+
+.color-text--inverted {
+  color: var(--white-400);
+}
+
+.pattern-color--blue-50 {
+  background-color: var(--blue-50);
+}
+
+.pattern-color--blue-100 {
+  background-color: var(--blue-100);
+}
+
+.pattern-color--blue-200 {
+  background-color: var(--blue-200);
+}
+
+.pattern-color--blue-300 {
+  background-color: var(--blue-300);
+}
+
+.pattern-color--blue-400 {
+  background-color: var(--blue-400);
+}
+
+.pattern-color--blue-500 {
+  background-color: var(--blue-500);
+}
+
+.pattern-color--blue-600 {
+  background-color: var(--blue-600);
+}
+
+.pattern-color--blue-700 {
+  background-color: var(--blue-700);
+}
+
+.pattern-color--blue-800 {
+  background-color: var(--blue-800);
+}
+
+.pattern-color--blue-900 {
+  background-color: var(--blue-900);
+}
+
+.pattern-color--orange-500 {
+  background-color: var(--orange-500);
+}
+
+.pattern-color--red-500 {
+  background-color: var(--red-500);
+}
+
+.pattern-color--black-500 {
+  background-color: var(--black-500);
+}
+
+.pattern-color--black-400 {
+  background-color: var(--black-400);
+}
+
+.pattern-color--black-300 {
+  background-color: var(--black-300);
+}
+
+.pattern-color--black-200 {
+  background-color: var(--black-200);
+}
+
+.pattern-color--white-500 {
+  background-color: var(--white-500);
+}
+
+.pattern-color--white-400 {
+  background-color: var(--white-400);
+}
+
+.inline {
+  display: inline-block;
+}
+
+.inline button {
+  margin-top: .25em;
+}
+
+.inline button:last-child {
+  margin-bottom: 0;
+  margin-left: 0;
+}

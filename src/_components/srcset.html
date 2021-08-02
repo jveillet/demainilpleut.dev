@@ -1,0 +1,5 @@
+<img
+  src="{{ site.metadata.image_url | relative_url }}/{{ image.src }}"
+  sizes="{{ site.metadata.sizes }}"
+  srcset="{% for width in site.metadata.srcset %}{{ site.metadata.image_url | relative_url }}/{{ width }}/{{ image.src }} {{ width }}w{% if forloop.last == false %}, {% endif %}{% endfor %}"
+  alt="{{ image.alt }}" class="responsive-image">

@@ -1,0 +1,356 @@
+/**
+Name: topbar.scss
+Description: Topbar styles
+*/
+
+.topbar {
+  position: relative;
+  background-image: linear-gradient(90deg,#f2f5ff,#5b83fd 25%,#2c5efa 25%,#03e474 50%,#ed9c0a 25%,#f5eb16 75%,#fa2c39 25%,#0027d7 100%);
+  background-size: 100% .25em;
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-color: var(--topbar-background-color);
+}
+
+.topbar.active {
+  background-image: none;
+}
+
+.topbar-logo-url,
+.topbar-Logo-url:visited {
+  color: var(--main-text-color);
+  display: block;
+  font-size: 1.5em;
+  font-weight: 600;
+  padding: .8em .5em;
+  text-decoration: none;
+}
+
+.topbar-logo-url:hover,
+.topbar-logo-url:focus {
+  color: var(--topbar-link-color);
+  text-decoration: underline;
+}
+
+.topbar-logo {
+  background: var(--topbar-logo),
+    linear-gradient(transparent, transparent);
+  background-size: auto 3em;
+  float: left;
+  margin-left: .5em;
+  padding-left: 2.8em;
+  position: relative;
+  z-index: 1;
+}
+
+.topbar-logo-dev {
+  background: url("/images/dev/logo.svg") no-repeat left center,
+    linear-gradient(transparent, transparent);
+  background-size: auto 3em;
+  float: left;
+  margin-left: .5em;
+  padding-left: 2.8em;
+  position: relative;
+  z-index: 1;
+}
+
+.topbar-menu-btn {
+  display: block;
+  float: right;
+  margin-top: 1.3em;
+  margin-right: 1em;
+}
+
+.topbar .topbar-navigation {
+  clear: both;
+  max-height: 0;
+}
+
+.js .topbar .topbar-navigation {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.topbar .topbar-navigation.active {
+  animation: moveFromTop .2s ease-in;
+  max-height: 15em;
+  opacity: 1;
+  padding-bottom: 2em;
+}
+
+@keyframes moveFromTop {
+
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+.topbar-btn-close {
+  display: none;
+}
+
+.topbar-btn-close.active {
+  animation: bounce 1s ease-in;
+  bottom: -10%;
+  display: block;
+  left: 50%;
+  position: absolute;
+  margin-left: -1.5em;
+}
+
+@keyframes bounce {
+
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  5% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  15% {
+    padding-bottom: .3125em;
+    transform: translateY(0);
+  }
+
+  30% {
+    transform: translateY(-50%);
+  }
+
+  40% {
+    padding-bottom: .375em;
+    transform: translateY(0%);
+  }
+
+  50% {
+    transform: translateY(-30%);
+  }
+
+  70% {
+    padding-bottom: .4375em;
+    transform: translateY(0%);
+  }
+
+  80% {
+    transform: translateY(-15%);
+  }
+
+  90% {
+    padding-bottom: .5em;
+    transform: translateY(0%);
+  }
+
+  95% {
+    transform: translateY(-7%);
+  }
+
+  97% {
+    padding-bottom: .5625em;
+    transform: translateY(0%);
+  }
+
+  99% {
+    transform: translateY(-3%);
+  }
+
+  100% {
+    opacity: 1;
+    padding-bottom: .5625em;
+    transform: translateY(0);
+  }
+
+}
+
+.topbar .topbar-navigation ul {
+  margin: 0;
+  padding: 0;
+}
+
+.topbar-navigation-item,
+.topbar-navigation-item:visited {
+  color: var(--topbar-navigation-item-color);
+  display: block;
+  font-weight: 600;
+  padding: .5em;
+  text-align: center;
+  text-decoration: none;
+}
+
+.topbar-navigation-item-current {
+  border: 0;
+  color: var(--topbar-link-color) !important;
+  font-weight: 600;
+}
+
+.js-theme-toggle {
+  border-radius: .25em;
+  border: none;
+  cursor: pointer;
+  font-size: 100%;
+  height: 2.5em;
+  line-height: 1;
+  overflow: visible;
+  padding: 0 1em;
+  white-space: nowrap;
+  display: block;
+  margin: 0 auto;
+}
+
+.js-theme-toggle::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.js-theme-toggle:hover,
+.button:focus {
+  box-shadow: 0 0 .3125em rgba(0, 0, 0, .5);
+}
+
+.js-theme-toggle:active {
+  box-shadow: 0 0 .3125em rgba(0, 0, 0, .5) inset;
+}
+
+@media all and (max-width: 21em) {
+
+  .topbar-logo-url,
+  .topbar-Logo-url:visited {
+    font-size: 1em;
+    padding: 0;
+    padding-top: .8em;
+    padding-bottom: .8em;
+  }
+
+  .topbar-logo {
+    background-size: auto 2em;
+    padding-left: 2.2em;
+  }
+
+  .topbar-logo-dev {
+    background-size: auto 2em;
+    padding-left: 2.2em;
+  }
+
+  .topbar-menu-btn {
+    font-size: 85%;
+    padding: 1em;
+  }
+
+}
+
+@media all and (min-width: 47em) {
+
+  .topbar {
+    line-height: 1.5em;
+    overflow: auto;
+  }
+
+  .topbar.active {
+    border-radius: 0;
+  }
+
+  .topbar .topbar-menu {
+    float: right;
+    margin-right: 2em;
+  }
+
+  .topbar-logo {
+    background: var(--topbar-logo),
+      linear-gradient(transparent, transparent);
+    background-size: auto 3em;
+    float: left;
+    font-size: 1.2em;
+    margin-left: 1em;
+    padding-left: 3em;
+    position: relative;
+    top: .2em;
+    z-index: 1;
+  }
+
+  .topbar-logo-dev {
+    background: url("/images/dev/logo.svg") no-repeat left center,
+      linear-gradient(transparent, transparent);
+    background-size: auto 3em;
+    float: left;
+    font-size: 1.2em;
+    margin-left: 2em;
+    padding-left: 3em;
+    position: relative;
+    top: .2em;
+    z-index: 1;
+  }
+
+  .topbar-menu-btn,
+  .topbar-btn-close,
+  .topbar-btn-close.active {
+    display: none;
+  }
+
+  .js .topbar .topbar-navigation {
+    max-height: none;
+    padding-bottom: 0;
+  }
+
+  .topbar .topbar-navigation ul {
+    border: 0;
+    margin: 0 0 0 -.25em;
+  }
+
+  .topbar .topbar-navigation li {
+    display: inline-block;
+    margin: 1em .25em;
+  }
+
+  .topbar-navigation-item,
+  .topbar-navigation-item:visited {
+    color: var(--topbar-navigation-item-color);
+    font-weight: 400;
+    text-decoration: none;
+  }
+
+  .topbar-navigation-item:hover,
+  .topbar-navigation-item:focus {
+    color: var(--topbar-link-color);
+  }
+
+  .topbar-navigation-item-current {
+    border-bottom: .25em solid var(--topbar-link-color);
+    color: var(--main-text-color) !important;
+    font-weight: 600;
+  }
+
+  .topbar-logo-url,
+  .topbar-Logo-url:visited {
+    color: var(--main-text-color);
+    display: block;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: .8em .5em;
+    margin-top: .2em;
+    text-decoration: none;
+  }
+
+  .js-theme-toggle {
+    border-radius: .25em;
+    border: none;
+    cursor: pointer;
+    font-size: 100%;
+    height: 2.5em;
+    line-height: 1;
+    margin-right: 1em;
+    margin: 0;
+    overflow: visible;
+    padding: 0 1em;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+
+}

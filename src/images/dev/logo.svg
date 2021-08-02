@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generator: Gravit.io -->
+<svg width="500" height="500" preserveAspectRatio="xMidYMid meet" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+	<defs>
+		<clipPath id="_clipPath_XrEzjOF9V5bVOhAkLAFLey7Z4ygrDkZG">
+			<rect width="500" height="500"/>
+		</clipPath>
+	</defs>
+	<g clip-path="url(#_clipPath_XrEzjOF9V5bVOhAkLAFLey7Z4ygrDkZG)">
+		<ellipse vector-effect="non-scaling-stroke" cx="151" cy="296.5" rx="82" ry="82.5" fill="rgb(255,153,2)"/>
+		<ellipse vector-effect="non-scaling-stroke" cx="243" cy="332.5" rx="82" ry="82.5" fill="rgb(255,153,2)"/>
+		<ellipse vector-effect="non-scaling-stroke" cx="330" cy="296.5" rx="82" ry="82.5" fill="rgb(255,153,2)"/>
+		<ellipse vector-effect="non-scaling-stroke" cx="293" cy="199" rx="82" ry="82.5" fill="rgb(255,153,2)"/>
+		<ellipse vector-effect="non-scaling-stroke" cx="188" cy="238.5" rx="82" ry="82.5" fill="rgb(255,153,2)"/>
+		<line x1="16" y1="304" x2="136.5" y2="87" stroke-width="20" stroke="rgb(255,153,2)" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="3"/>
+		<line x1="186" y1="129" x2="234" y2="45" stroke-width="20" stroke="rgb(255,153,2)" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="3"/>
+		<line x1="330" y1="105" x2="377" y2="23" stroke-width="20" stroke="rgb(255,153,2)" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="3"/>
+		<line x1="397" y1="210" x2="477" y2="69" stroke-width="20" stroke="rgb(255,153,2)" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="3"/>
+		<line x1="400" y1="393.5" x2="473" y2="257" stroke-width="20" stroke="rgb(255,153,2)" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="3"/>
+		<line x1="11.5" y1="445" x2="56" y2="364" stroke-width="20" stroke="rgb(255,153,2)" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="3"/>
+		<line x1="125" y1="479" x2="161" y2="415" stroke-width="20" stroke="rgb(255,153,2)" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="3"/>
+		<line x1="272" y1="483" x2="313" y2="408" stroke-width="20" stroke="rgb(255,153,2)" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="3"/>
+	</g>
+</svg>

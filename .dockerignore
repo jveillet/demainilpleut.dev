@@ -35,5 +35,4 @@ yarn-debug.log*
 # Yarn Integrity file
 .yarn-integrity
 
-# Docker
-docker-compose.override.yaml
+.git

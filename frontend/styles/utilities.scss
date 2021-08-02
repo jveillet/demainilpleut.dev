@@ -1,0 +1,55 @@
+/**
+Name: utilities.scss
+Description: Utility classes
+*/
+
+/* Text utilities */
+
+blockquote {
+  border-left: .3em solid var(--quote-border-color);
+  font-style: italic;
+  font-weight: 600;
+  padding: .5em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+code {
+  background-color: var(--code-background-color);
+  color: var(--code-color);
+  font-family: Consolas, Monaco, "Andale Mono", monospace;
+  white-space: pre-line;
+  white-space: pre-wrap;
+  white-space: pre;
+  padding: .25em;
+  border-radius: .5em;
+}
+
+.section-title {
+  display: block;
+  font-weight: bold;
+  letter-spacing: .1em;
+  margin-bottom: .75em;
+  margin-top: .75em;
+  text-transform: uppercase;
+  color: var(--main-section-title-color);
+}
+
+/* Lists utilities */
+
+.list-unstyled {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list-unordered {
+  list-style-type: disc;
+  margin-left: 2em;
+}
+
+.list-ordered {
+  list-style-type: decimal;
+  margin-left: 2em;
+}

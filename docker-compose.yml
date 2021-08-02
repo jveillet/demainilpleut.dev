@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file: .env
+    ports:
+      - '4000:4000'
+      - "4001:4001"
+      - "4002:4002"
+    volumes:
+      - .:/app
+    command: bash -c "yarn start --host '0.0.0.0'"

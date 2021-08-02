@@ -1,0 +1,67 @@
+/**
+Name: button.scss
+Description: Buttons  styles
+*/
+
+.btn {
+  appearance: none;
+  border-radius: .25em;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 100%;
+  font-weight: 600;
+  height: 3em;
+  line-height: 3;
+  margin: 0;
+  overflow: visible;
+  padding: 0 1em;
+  text-decoration: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.btn::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.btn:hover,
+.button:focus {
+  box-shadow: 0 0 .3125em rgba(0, 0, 0, .5);
+}
+
+.btn:active {
+  box-shadow: 0 0 .3125em rgba(0, 0, 0, .5) inset;
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus,
+.btn:visited {
+  text-decoration: none;
+}
+
+.btn--small {
+  height: 2em;
+  line-height: 2;
+  margin: 0;
+  padding-left: .8em;
+  padding-right: .8em;
+}
+
+.btn--round {
+  border-radius: 100%;
+  border: none;
+  cursor: pointer;
+  display: block;
+  font-size: 1.1em;
+  height: 3em;
+  text-align: center;
+  width: 3em;
+}
+
+.btn--primary {
+  background-color: var(--button-primary-background-color);
+  color: var(--button-primary-color);
+}

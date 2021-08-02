@@ -1,0 +1,36 @@
+---
+layout: default
+author: jveillet
+permalink: /authors/jveillet
+---
+
+{% assign author = site.data.authors[page.author] %}
+
+<article class="page page-author">
+
+  <h1>{{author.name}}</h1>
+
+  <div class="page-author-avatar">
+    <img src="{{ author.avatar }}" alt="{{ author.handle }}" class="avatar avatar--size">
+  </div>
+
+  <div class="article-excerpt archives-spacing">{{ author.description }}</div>
+
+  <div class="archives archives-spacing">
+    {% render "author_links" site: site, author: author %}
+  </div>
+
+<div class="archives">
+  <span class="section-title">Articles by {{ author.name }}</span>
+  <ol class="list-unordered" start="1" type="1">
+    {% for post in site.posts %}
+      {% if author.handle == post.author %}
+        <li>
+          <a href="{{ post.url | relative_url }}" class="primary-link">{{ post.title }}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ol>
+</div>
+
+</article>
