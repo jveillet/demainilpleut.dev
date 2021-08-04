@@ -4,31 +4,38 @@ layout: default
 
 {% assign author = site.data.authors[page.author] %}
 
-<article class="page page-author">
-
-  <h1>{{ author.name }}</h1>
-
-  <div class="page-author-avatar">
-    <img src="{{ author.avatar }}" alt="{{ author.handle }}" class="avatar avatar--size">
+<div class="page-author">
+  <div class="breadcrumbs">
+    <div class="breadcrumb-item"><a href="{% link _pages/authors.html %}" class="breadcrumb-icon">Authors</a></div>
+    <div class="breadcrumb-item breadcrumb-item--active">{{ author.name }}</div>
   </div>
 
-  <div class="article-excerpt archives-spacing">{{ author.description }}</div>
+  <div class="page-author">
+    <h1>{{ author.name }}</h1>
 
-  <div class="archives archives-spacing">
-    {% render "author_links" site: site, author: author %}
+    <div class="page-author-avatar">
+      <img src="{{ author.avatar }}" alt="{{ author.handle }}" class="avatar avatar--size">
+    </div>
+
+    <div class="article-excerpt archives-spacing">{{ author.description }}</div>
+
+    <div class="archives archives-spacing">
+      {% render "author_links" site: site, author: author %}
+    </div>
+
+  <div class="archives">
+    <span class="section-title">Articles by {{ author.name }}</span>
+    <ol class="list-unordered" start="1" type="1">
+      {% for post in site.posts %}
+        {% if author.handle == post.author %}
+          <li>
+            <a href="{{ post.url | relative_url }}" class="primary-link">{{ post.title }}</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ol>
   </div>
 
-<div class="archives">
-  <span class="section-title">Articles by {{ author.name }}</span>
-  <ol class="list-unordered" start="1" type="1">
-    {% for post in site.posts %}
-      {% if author.handle == post.author %}
-        <li>
-          <a href="{{ post.url | relative_url }}" class="primary-link">{{ post.title }}</a>
-        </li>
-      {% endif %}
-    {% endfor %}
-  </ol>
+  </div>
+
 </div>
-
-</article>
