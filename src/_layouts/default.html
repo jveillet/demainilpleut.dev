@@ -29,7 +29,7 @@
   {% feed_meta %}
   <link media="screen" rel="stylesheet" href="{% webpack_path css %}" />
   {% if bridgetown.environment == 'production' %}
-    {% assign img_url = 'images/' | relative_url %}
+    {% assign img_url = 'images' | relative_url %}
   {% else %}
     {% assign img_url = 'images/dev' | relative_url %}
   {% endif %}
@@ -39,7 +39,7 @@
   <link rel="icon" href="{{ img_url }}/favicon-32.png" sizes="32x32" />
   <link rel="icon" href="{{ img_url }}/favicon-16.png" sizes="16x16" />
   <link rel="icon" href="{{ img_url }}/favicon-128.png" sizes="128x128" />
-  <link rel="manifest" href="assets/manifest.json"">
+  <link rel="manifest" href="{% link assets/manifest.json %}">
   <script>
     if (
           localStorage.getItem('data-theme') == 'dark' ||
