@@ -1,0 +1,37 @@
+/**
+Name: breadcrumb.scss
+Description: Breadcrumb styles.
+*/
+
+.breadcrumbs {
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: row;
+  /* This aligns items to the end line on main-axis */
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 1.5em;
+}
+
+.breadcrumb-icon {
+  background: var(--breadcrumb-icon),
+    linear-gradient(transparent, transparent);
+  background-size: auto 1.5em;
+  display: block;
+  padding: .5em 1.5em .5em 1em;
+}
+
+.breadcrumb-item--active {
+  margin-left: .5em;
+}
+
+.breadcrumb-item a:link,
+.breadcrumb-item a:visited {
+  text-decoration: none;
+  color: var(--breadcrumb-color);
+}
+
+.breadcrumb-item a:hover {
+  text-decoration: underline;
+  color: var(--breadcrumb-hover-color);
+}

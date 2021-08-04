@@ -2,13 +2,11 @@
 layout: default
 ---
 
-<div class="page">
+<div class="page-archive">
 
-  <div class="archives-breadcrumb">
-    <div class="breadcrumbs">
-      <div class="breadcrumb-item"><a href="{{ 'archives' | relative_url }}" class="breadcrumb-icon">Archives</a></div>
-      <div class="breadcrumb-item breadcrumb-active">{{ page.title }}</div>
-    </div>
+  <div class="breadcrumbs">
+    <div class="breadcrumb-item"><a href="{{ 'archives' | relative_url }}" class="breadcrumb-icon">Archives</a></div>
+    <div class="breadcrumb-item breadcrumb-item--active">{{ page.title }}</div>
   </div>
 
   <div class="posts">

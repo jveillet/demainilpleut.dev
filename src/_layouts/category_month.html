@@ -2,16 +2,14 @@
 layout: default
 ---
 
-<div class="page">
+<div class="page-archive">
 
   {% assign this_year = page.date | date: "%Y" %}
 
-  <div class="archives-breadcrumb">
-    <div class="breadcrumbs">
-      <div class="breadcrumb-item"><a href="{{ 'archives' | relative_url }}" class="breadcrumb-icon">Archives</a></div>
-      <div class="breadcrumb-item"><a href="{{ 'archives/'| append: this_year | relative_url }}" class="breadcrumb-icon">{{ this_year }}</a></div>
-      <div class="breadcrumb-item breadcrumb-active">{{ page.date | date: "%B" }}</div>
-    </div>
+  <div class="breadcrumbs">
+    <div class="breadcrumb-item"><a href="{{ 'archives' | relative_url }}" class="breadcrumb-icon">Archives</a></div>
+    <div class="breadcrumb-item"><a href="{{ 'archives/'| append: this_year | relative_url }}" class="breadcrumb-icon">{{ this_year }}</a></div>
+    <div class="breadcrumb-item breadcrumb-item--active">{{ page.date | date: "%B" }}</div>
   </div>
 
   <div class="posts">
