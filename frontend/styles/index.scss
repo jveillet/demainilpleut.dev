@@ -308,15 +308,15 @@ a, b, strong, dt {
 
 }
 
-@import "./utilities";
-@import "./alert";
-@import "./button";
-@import "./post";
-@import "./pagination";
-@import "./archive";
-@import "./author";
-@import "./footer";
-@import "./styleguide";
-@import "./topbar";
+@import "utilities";
+@import "alert";
+@import "button";
+@import "post";
+@import "pagination";
+@import "archive";
+@import "author";
+@import "footer";
+@import "styleguide";
+@import "topbar";
 
-@import "./prism.min.css";
+@import "prism.min.css";

@@ -41,7 +41,11 @@ const cssRules = {
     {
       loader: "css-loader",
       options: {
-        url: url => !url.startsWith('/'),
+        url: {
+          filter: (url, _resourcePath) => {
+            return !url.startsWith('/');
+          },
+        },
         importLoaders: 1
       }
     }
