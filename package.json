@@ -2,6 +2,20 @@
   "name": "demainilpleut.dev",
   "version": "4.0.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jveillet/demainilpleut.dev.git"
+  },
+  "author": "Jérémie Veillet",
+  "license": "GPL v3",
+  "bugs": {
+    "url": "https://github.com/jveillet/demainilpleut.dev/issues"
+  },
+  "engines": {
+    "node": ">= 14.17.4",
+    "npm": ">= 6.14.14",
+    "yarn": ">= 1.22.5"
+  },
   "scripts": {
     "build": "bundle exec bridgetown build",
     "serve": "bundle exec bridgetown serve",
@@ -20,6 +34,7 @@
     "clean-webpack-plugin": "^4.0.0-alpha.0",
     "concurrently": "^6.2.0",
     "css-loader": "^6.2.0",
+    "css-minimizer-webpack-plugin": "^3.0.2",
     "esbuild": "^0.12.7",
     "esbuild-loader": "^2.13.1",
     "eslint": "^7.32.0",

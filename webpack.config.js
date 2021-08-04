@@ -1,5 +1,6 @@
 const { merge } = require('webpack-merge');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const path = require('path');
 
 var config = require('./config/webpack.defaults.js');
@@ -41,7 +42,16 @@ const customWebpackConfig = {
             verbose: true,
             cleanOnceBeforeBuildPatterns: [path.join(process.cwd(), 'public/_bridgetown/**/*')]
         })
-    ]
+    ],
+    optimization: {
+        minimize: true,
+        minimizer: [
+            // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
+            // `...`,
+            new CssMinimizerPlugin(),
+            '...'
+        ],
+    },
 };
 
 config = merge(config, customWebpackConfig);
