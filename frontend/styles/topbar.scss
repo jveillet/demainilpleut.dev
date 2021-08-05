@@ -72,7 +72,6 @@ Description: Topbar styles
 }
 
 .topbar .topbar-navigation.active {
-  animation: moveFromTop .2s ease-in;
   max-height: 15em;
   opacity: 1;
   padding-bottom: 2em;
@@ -97,12 +96,23 @@ Description: Topbar styles
 }
 
 .topbar-btn-close.active {
-  animation: bounce 1s ease-in;
   bottom: -10%;
   display: block;
   left: 50%;
   position: absolute;
   margin-left: -1.5em;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+
+  .topbar .topbar-navigation.active {
+    animation: moveFromTop .2s ease-in;
+  }
+
+  .topbar-btn-close.active {
+    animation: bounce 800ms ease-in;
+  }
+
 }
 
 @keyframes bounce {
