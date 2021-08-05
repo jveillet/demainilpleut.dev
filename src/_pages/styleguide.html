@@ -213,30 +213,30 @@ image:
       <div class="pattern-item">
         <article class="article">
           <h2><a href="#" title="Lorem ipsum dolor sit amet." class="article-title">Lorem ipsum dolor sit amet.</a></h2>
-          <div class="article-excerpt">Donec nec leo fringilla, pulvinar eros sit
+          <div class="articles-footer">
+            <div class="articles-footer-wrapper">
+              <img src="https://via.placeholder.com/80" width="32" height="32" alt="John Appleseed" class="articles-footer-avatar">
+              <span class="article-author"><a class="article-author--link" href="#">John Appleseed</a></span>
+              <span class="article-pubdate"> on <time datetime="2014-02-10T12:10:48-05:00">February 10, 2014</time></span>
+            </div><!-- end of articles footer wrapper -->
+          </div><!-- end of articles footer -->
+          <div class="post-tags tags">
+            <div class="tag-item">
+              <a href="#" class="tag-link">#tag1</a>
+            </div>
+            <div class="tag-item">
+              <a href="#" class="tag-link">#tag2</a>
+            </div>
+            <div class="tag-item">
+              <a href="#" class="tag-link">#tag3</a>
+            </div>
+        </div><!-- end of articles footer tags -->
+        <div class="article-excerpt">Donec nec leo fringilla, pulvinar eros sit
             amet, scelerisque enim. Cum sociis natoque penatibus et magnis dis
             parturient montes, nascetur ridiculus mus. Donec fringilla a quam sit
             amet iaculis. Nullam a nisl sit amet arcu posuere iaculis non a tortor.
             Fusce non nulla arcu...
-          </div>
-          <div class="articles-footer">
-            <div class="articles-footer-wrapper">
-              <img src="https://placehold.it/80x80" width="32" height="32" alt="John Appleseed" class="articles-footer-avatar">
-              <span class="article-author"><a class="article-author--link" href="#">John Appleseed</a></span>
-              <span class="article-pubdate"> on <time datetime="2014-02-10T12:10:48-05:00">February 10, 2014</time></span>
-              <div class="articles-footer-tags">
-                  <span class="article-tags-item">
-                    <a href="#" class="article-tags-link">#tag1</a>
-                  </span>
-                  <span class="article-tags-item">
-                    <a href="#" class="article-tags-link">#tag2</a>
-                  </span>
-                  <span class="article-tags-item">
-                    <a href="#" class="article-tags-link">#tag3</a>
-                  </span>
-              </div><!-- end of articles footer tags -->
-            </div><!-- end of articles footer wrapper -->
-          </div><!-- end of articles footer -->
+        </div>
         </article><!-- end of article -->
       </div><!-- end of pattern item -->
 
@@ -246,6 +246,24 @@ image:
       <div class="pattern-item" id="target-3">
         <pre><code class="language-markup">&lt;article class="article">
   &lt;h2>&lt;a href="#" title="Lorem ipsum dolor sit amet." class="article-title">Lorem ipsum dolor sit amet.&lt;/a>&lt;/h2>
+  &lt;div class="articles-footer">
+    &lt;div class="articles-footer-wrapper">
+      &lt;img src="https://placehold.it/80x80" width="32" height="32" alt="John Appleseed" class="articles-footer-avatar">
+      &lt;span class="article-author">&lt;a class="article-author--link" href="#">John Appleseed&lt;/a>&lt;/span>
+      &lt;span class="article-pubdate"> on &lt;time datetime="2014-02-10T12:10:48-05:00">February 10, 2014&lt;/time>&lt;/span>
+    &lt;/div>
+  &lt;/div>
+  &lt;div class="post-tags tags">
+        &lt;div class="tag-item">
+          &lt;a href="#" class="tag-link">#tag1&lt;/a>
+        &lt;/div>
+        &lt;div class="tag-item">
+          &lt;a href="#" class="tag-link">#tag2&lt;/a>
+        &lt;/div>
+        &lt;div class="tag-item">
+          &lt;a href="#" class="tag-link">#tag3&lt;/a>
+        &lt;/div>
+      &lt;/div>
   &lt;span class="article-author">&lt;a class="article-author--link" href="#">John Appleseed&lt;/a>&lt;/span>
   &lt;div class="article-excerpt">Donec nec leo fringilla, pulvinar eros sit
     amet, scelerisque enim. Cum sociis natoque penatibus et magnis dis
@@ -253,24 +271,7 @@ image:
     amet iaculis. Nullam a nisl sit amet arcu posuere iaculis non a tortor.
     Fusce non nulla arcu...
   &lt;/div>
-  &lt;div class="articles-footer">
-    &lt;div class="articles-footer-wrapper">
-      &lt;img src="https://placehold.it/80x80" width="32" height="32" alt="John Appleseed" class="articles-footer-avatar">
-      &lt;span class="article-author">&lt;a class="article-author--link" href="#">John Appleseed&lt;/a>&lt;/span>
-      &lt;span class="article-pubdate"> on &lt;time datetime="2014-02-10T12:10:48-05:00">February 10, 2014&lt;/time>&lt;/span>
-      &lt;div class="articles-footer-tags">
-        &lt;span class="article-tags-item">
-          &lt;a href="#" class="article-tags-link">#tag1&lt;/a>
-        &lt;/span>
-        &lt;span class="article-tags-item">
-          &lt;a href="#" class="article-tags-link">#tag2&lt;/a>
-        &lt;/span>
-        &lt;span class="article-tags-item">
-          &lt;a href="#" class="article-tags-link">#tag3&lt;/a>
-        &lt;/span>
-      &lt;/div>
-    &lt;/div>
-  &lt;/div>
+
 &lt;/article></code></pre>
       </div><!-- end of pattern item -->
     </div><!-- end of pattern -->
@@ -282,16 +283,16 @@ image:
           <h1 class="article-title">Lorem ipsum dolor sit amet.</h1>
           <span class="article-author"><a class="article-author--link" href="#">John Appleseed</a></span>
           <span class="article-pubdate">on&nbsp;<time datetime="2014-02-10T12:10:48-05:00">February 10, 2014</time></span>
-          <div class="article-tags">
-            <span class="article-tags-item">
-              <a href="#" class="article-tags-link">#tag1</a>
-            </span>
-            <span class="article-tags-item">
-              <a href="#" class="article-tags-link">#tag2</a>
-            </span>
-            <span class="article-tags-item">
-              <a href="#" class="article-tags-link">#tag3</a>
-            </span>
+          <div class="tags">
+            <div class="tag-item">
+              <a href="#" class="tag-link">#tag1</a>
+            </div>
+            <div class="tag-item">
+              <a href="#" class="tag-link">#tag2</a>
+            </div>
+            <div class="tag-item">
+              <a href="#" class="tag-link">#tag3</a>
+            </div>
           </div>
           <div class="article-summary">
             <span class="article-readingTime">3 min read</span>
@@ -310,16 +311,16 @@ image:
   &lt;h1 class="article-title">Lorem ipsum dolor sit amet.&lt;/h1>
   &lt;span class="article-author">&lt;a class="article-author--link" href="#">John Appleseed&lt;/a>&lt;/span>
   &lt;span class="article-pubdate">&mdash;&nbsp;&lt;time datetime="2014-02-10T12:10:48-05:00">February 10, 2014&lt;/time>&lt;/span>
-  &lt;div class="article-tags">
-    &lt;span class="article-tags-item">
-      lt;a href="#" class="article-tags-link">#tag1&lt;/a>
-    &lt;/span>
-    &lt;span class="article-tags-item">
-      &lt;a href="#" class="article-tags-link">#tag2&lt;/a>
-    &lt;/span>
-    &lt;span class="article-tags-item">
-      &lt;a href="#" class="article-tags-link">#tag3&lt;/a>
-      &lt;/span>
+  &lt;div class="tags">
+    &lt;div class="tag-item">
+      lt;a href="#" class="tag-link">#tag1&lt;/a>
+    &lt;/div>
+    &lt;div class="tag-item">
+      &lt;a href="#" class="tag-link">#tag2&lt;/a>
+    &lt;/div>
+    &lt;div class="tag-item">
+      &lt;a href="#" class="tag-link">#tag3&lt;/a>
+    &lt;/div>
   &lt;/div>
   &lt;div class="article-summary">
     &lt;span class="article-readingTime">3 min read&lt;/span>

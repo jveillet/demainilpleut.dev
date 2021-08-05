@@ -18,12 +18,13 @@ blockquote {
 code {
   background-color: var(--code-background-color);
   color: var(--code-color);
-  font-family: Consolas, Monaco, "Andale Mono", monospace;
-  white-space: pre-line;
-  white-space: pre-wrap;
-  white-space: pre;
-  padding: .25em;
-  border-radius: .5em;
+  font-weight: 800;
+  border-radius: .2em;
+  box-decoration-break: clone;
+  font-family: consolas, "Liberation Mono", courier, monospace;
+  padding: .1875em .375em;
+  white-space: nowrap;
+  word-wrap: break-word;
 }
 
 .section-title {
