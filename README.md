@@ -1,7 +1,7 @@
 # demainilpleut.dev
 
 [![Build Status](https://github.com/jveillet/demainilpleut.dev/workflows/CI/badge.svg)](https://github.com/jveillet/demainilpleut.dev/actions)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/c9c84ed3-30d6-41a4-8ff4-aac2486df4f9/deploy-status)](https://app.netlify.com/sites/gracious-tereshkova-0d8c2d/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/40732b0e-05bc-4aa8-ba99-6bf58f198219/deploy-status)](https://app.netlify.com/sites/demainilpleut/deploys)
 
 Static HTML version of demainilpleut.dev using the static website generator
 [Bridgetown](https://www.bridgetownrb.com).
