@@ -43,10 +43,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
   --red-500: #ff000f;
 
   /* Article tags */
-  --tags-bg-color: var(--blue-100);
-  --tags-color: var(--blue-900);
-  --tags-hover-bg-color: var(--blue-900);
-  --tags-hover-color: var(--blue-100);
+  --tag-bg-color: var(--blue-50);
+  --tag-color: var(--blue-800);
+  --tag-hover-bg-color: var(--blue-100);
 }
 
 :root[data-theme = "light"] {
@@ -319,5 +318,6 @@ a, b, strong, dt {
 @import "styleguide";
 @import "topbar";
 @import "breadcrumb";
+@import "tags";
 
 @import "prism.min.css";

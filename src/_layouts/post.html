@@ -35,12 +35,12 @@ layout: default
         </span>
       </div>
     </div><!-- End of author-grid -->
-    <div class="article-tags">
+    <div class="tags">
       {% for category in page.categories %}
-        <span class="article-tags-item">
+        <div class="tag-item">
           {% assign cat = category | downcase | replace: ' ', '-' %}
-          <a href="{{ 'archives/' | append: cat | relative_url }}" class="article-tags-link">#{{ category }}</a>
-        </span>
+          <a href="{{ 'archives/' | append: cat | relative_url }}" class="tag-link">#{{ category }}</a>
+        </div>
       {% endfor %}
     </div>
     <div class="article-content">

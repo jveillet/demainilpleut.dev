@@ -1,0 +1,21 @@
+<article class="articles">
+  <h2><a href="{{ post.url | relative_url }}" class="article-title">{{ post.title }}</a></h2>
+  <div class="articles-footer">
+    <div class="articles-footer-wrapper">
+      <img src="{{ author.avatar }}" width="48" height="48" alt="{{ author.name }}" class="articles-footer-avatar">
+      <span class="article-author"><a class="article-author--link" href="{{ author.permalink | relative_url }}">{{ author.name }}</a></span>
+      <span class="article-pubdate"> on <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %d, %Y' }}</time></span>
+    </div><!-- end of articles footer wrapper -->
+  </div><!-- end of articles footer -->
+  <div class="tags post-tags">
+    {% for category in post.categories %}
+      <div class="tag-item">
+        {% assign cat = category | downcase | replace: ' ', '-' %}
+        <a href="{{ 'archives/' | append: cat | relative_url }}" class="tag-link">#{{ category }}</a>
+      </div>
+    {% endfor %}
+  </div>
+  <div class="article-excerpt">
+    {{ post.excerpt | strip_html  }}
+  </div>
+</article>

@@ -26,10 +26,6 @@ Description: Styles for articles / posts
   border-bottom: 0;
 }
 
-.articles-footer {
-  margin-top: 3em;
-}
-
 .articles-footer-wrapper {
   display: flex;
   align-items: center;
@@ -43,11 +39,8 @@ Description: Styles for articles / posts
   margin-right: .5em;
 }
 
-.articles-footer-tags {
-  font-size: .9em;
-  display: inline;
-  font-weight: 600;
-  margin: 0;
+.post-tags {
+  margin-bottom: 1em;
 }
 
 .primary-link,
@@ -134,33 +127,6 @@ h2 .article-title:visited {
 .article-footer {
   margin-bottom: 2em;
   margin-top: 2em;
-}
-
-.article-tags {
-  margin-top: 1em;
-  font-size: .8em;
-  font-weight: 600;
-  width: 100%;
-}
-
-.article-tags-item {
-  margin-right: .5em;
-}
-
-.article-tags-link:link,
-.article-tags-link:visited{
-  background-color: var(--tags-bg-color);
-  border-radius: 5%;
-  color: var(--tags-color) !important;
-  display: inline-block;
-  margin-top: .5em;
-  padding: .5em;
-  text-decoration: none !important;
-}
-
-.article-tags-item .article-tags-link:hover{
-  background-color: var(--tags-hover-bg-color);
-  color: var(--tags-hover-color) !important;
 }
 
 .author-grid {
@@ -307,24 +273,6 @@ h2 .article-title:visited {
     justify-content: flex-start;
   }
 
-  .articles-footer-tags {
-    font-size: .9em;
-    display: inline;
-    font-weight: 600;
-    margin-left: 3em;
-  }
-
-  .article-tags-link:link,
-  .article-tags-link:visited {
-    background-color: var(--tags-bg-color);
-    color: var(--tags-color) !important;
-    border-radius: 5%;
-    display: inline-block;
-    margin-top: 0;
-    padding: .5em;
-    text-decoration: none !important;
-  }
-
   .article-wrapper {
     margin: 0 auto;
   }
@@ -337,14 +285,6 @@ h2 .article-title:visited {
   .article-categories {
     float: left;
     width: 80%;
-  }
-
-  .article-tags {
-    font-size: 1em;
-  }
-
-  .article-tags-item {
-    margin-top: 0;
   }
 
   .article-pubdate {
