@@ -17,7 +17,7 @@
     "yarn": ">= 1.22.5"
   },
   "scripts": {
-    "build": "bundle exec bridgetown build",
+    "build": "BRIDGETOWN_ENV=production bundle exec bridgetown build",
     "serve": "bundle exec bridgetown serve",
     "clean": "bundle exec bridgetown clean",
     "webpack-build": "webpack --mode production",
