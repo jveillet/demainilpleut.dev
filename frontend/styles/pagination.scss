@@ -17,7 +17,7 @@ Description: pagination styles
 }
 
 .page-numbers li {
-  border-right: .125em solid var(--articles-separator-color);
+  border-right: .125em solid var(--post-separator-color);
   float: left;
   font-weight: bold;
   height: 1.6rem;
@@ -48,7 +48,7 @@ Description: pagination styles
 @media all and (min-width: 47em) {
 
   .page-numbers li {
-    border-right: .125em solid var(--articles-separator-color);
+    border-right: .125em solid var(--post-separator-color);
     float: left;
     font-weight: bold;
     height: 1.6rem;

@@ -3,28 +3,10 @@ Name: archive.scss
 Description: Archives section styles
 */
 
-.page-archive {
-  margin-bottom: 1em;
-  padding-left: .8em;
-  padding-right: .8em;
-}
-
-.archives-spacing {
-  margin-bottom: 2em;
-}
-
-.archives-return-link {
-  margin-top: 1em;
-}
-
 .archives-complement {
   margin-left: .5em;
   font-size: .8em;
   color: var(--main-text-color);
-}
-
-.archives-header {
-  margin-bottom: 3em;
 }
 
 .archives-link a:link,

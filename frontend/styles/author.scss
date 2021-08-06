@@ -3,10 +3,12 @@ Name: author.scss
 Description: Author section styles
 */
 
-.page-author {
-  margin-bottom: 1em;
-  padding-left: .8em;
-  padding-right: .8em;
+@mixin social-background-icon($url) {
+  background: url($url) no-repeat left center,
+    linear-gradient(transparent, transparent);
+  background-size: auto 1.5em;
+  display: block;
+  padding: .5em 0 .3em 2em;
 }
 
 .avatar {
@@ -22,35 +24,35 @@ Description: Author section styles
   text-align: center;
 }
 
-.members-list {
+.authors {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
   grid-gap: 4rem;
   margin: 2em 0 4rem;
 }
 
-.member-links {
+.author__links {
   margin-top: .5em;
   margin-bottom: .5em;
 }
 
-.member-links a {
+.author__links a {
   text-decoration: none;
 }
 
-.member-name {
+.author__name {
   font-size: 1.2em;
 }
 
-.member-bio {
+.author__bio {
   margin-bottom: 1em;
   padding-bottom: 1em;
   width: 15em;
-  border-bottom: .06em solid var(--articles-separator-color);
+  border-bottom: .06em solid var(--post-separator-color);
 }
 
-.members-articles-count {
-  color: var(--members-articles-count-color);
+.author__posts-count {
+  color: var(--author-post-count-color);
   font-weight: 600;
 }
 
@@ -65,91 +67,43 @@ Description: Author section styles
 }
 
 .social-web {
-  background: url("/images/icon-web.svg") no-repeat left center,
-    linear-gradient(transparent, transparent);
-  background-size: auto 1.5em;
-  display: block;
-  padding: .5em 0 .5em 2em;
+  @include social-background-icon("/images/icon-web.svg");
 }
 
 .social-twitter {
-  background: url("/images/twitter.svg") no-repeat left center,
-    linear-gradient(transparent, transparent);
-  background-size: auto 1.5em;
-  display: block;
-  padding: .5em 0 .5em 2em;
+  @include social-background-icon("/images/twitter.svg");
 }
 
 .social-linkedin {
-  background: url("/images/linkedin.svg") no-repeat left center,
-    linear-gradient(transparent, transparent);
-  background-size: auto 1.5em;
-  display: block;
-  padding: .5em 0 .5em 2em;
+  @include social-background-icon("/images/linkedin.svg");
 }
 
 .social-github {
-  background: url("/images/github.svg") no-repeat left center,
-    linear-gradient(transparent, transparent);
-  background-size: auto 1.5em;
-  display: block;
-  padding: .5em 0 .5em 2em;
-}
-
-.social-gplus {
-  background: url("/images/google_plus.svg") no-repeat left center,
-    linear-gradient(transparent, transparent);
-  background-size: auto 1.5em;
-  display: block;
-  padding: .5em 0 .5em 2em;
+  @include social-background-icon("/images/github.svg");
 }
 
 .social-facebook {
-  background: url("/images/facebook.svg") no-repeat left center,
-    linear-gradient(transparent, transparent);
-  background-size: auto 1.5em;
-  display: block;
-  padding: .5em 0 .5em 2em;
+  @include social-background-icon("/images/facebook.svg");
 }
 
 .social-gitlab {
-  background: url("/images/gitlab.svg") no-repeat left center,
-    linear-gradient(transparent, transparent);
-  background-size: auto 1.5em;
-  display: block;
-  padding: .5em 0 .5em 2em;
+  @include social-background-icon("/images/gitlab.svg");
 }
 
 .social-mastodon {
-  background: url("/images/mastodon.svg") no-repeat left center,
-    linear-gradient(transparent, transparent);
-  background-size: auto 1.5em;
-  display: block;
-  padding: .5em 0 .5em 2em;
+  @include social-background-icon("/images/mastodon.svg");
 }
 
 .social-slack {
-  background: url("/images/slack.svg") no-repeat left center,
-    linear-gradient(transparent, transparent);
-  background-size: auto 1.5em;
-  display: block;
-  padding: .5em 0 .5em 2em;
+  @include social-background-icon("/images/slack.svg");
 }
 
 .social-instagram {
-  background: url("/images/instagram.svg") no-repeat left center,
-    linear-gradient(transparent, transparent);
-  background-size: auto 1.5em;
-  display: block;
-  padding: .5em 0 .5em 2em;
+  @include social-background-icon("/images/instagram.svg");
 }
 
 .social-devto {
-  background: url("/images/rainbowdev.svg") no-repeat left center,
-    linear-gradient(transparent, transparent);
-  background-size: auto 1.5em;
-  display: block;
-  padding: .5em 0 .5em 2em;
+  @include social-background-icon("/images/rainbowdev.svg");
 }
 
 @media all and (min-width: 47em) {
@@ -167,7 +121,6 @@ Description: Author section styles
     display: flex;
     flex-flow: row wrap;
     flex-direction: row;
-    /* This aligns items to the end line on main-axis */
     align-items: center;
     justify-content: space-around;
   }

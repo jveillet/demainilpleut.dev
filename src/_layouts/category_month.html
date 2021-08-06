@@ -1,26 +1,23 @@
 ---
-layout: default
+layout: page
 ---
 
-<div class="page-archive">
+{% assign this_year = page.date | date: "%Y" %}
 
-  {% assign this_year = page.date | date: "%Y" %}
+<div class="breadcrumbs">
+  <div class="breadcrumb-item"><a href="{{ 'archives' | relative_url }}" class="breadcrumb-icon">Archives</a></div>
+  <div class="breadcrumb-item"><a href="{{ 'archives/'| append: this_year | relative_url }}" class="breadcrumb-icon">{{ this_year }}</a></div>
+  <div class="breadcrumb-item breadcrumb-item--active">{{ page.date | date: "%B" }}</div>
+</div>
 
-  <div class="breadcrumbs">
-    <div class="breadcrumb-item"><a href="{{ 'archives' | relative_url }}" class="breadcrumb-icon">Archives</a></div>
-    <div class="breadcrumb-item"><a href="{{ 'archives/'| append: this_year | relative_url }}" class="breadcrumb-icon">{{ this_year }}</a></div>
-    <div class="breadcrumb-item breadcrumb-item--active">{{ page.date | date: "%B" }}</div>
-  </div>
-
-  <div class="posts">
-    {% for post in page.posts %}
+<div class="posts">
+  {% for post in page.posts %}
     <!-- Look the author details up from the site config. -->
-      {% assign author = site.data.authors[post.author] %}
-      {% render 'post_summary' site: site, post: post, author: author %}
-    {% endfor %}
-  </div>
+    {% assign author = site.data.authors[post.author] %}
+    {% render 'post_summary' site: site, post: post, author: author %}
+  {% endfor %}
+</div>
 
-  <div class="article-top">
-    <a href="#top" class="top" title="Go to the top of the page">↑ Back to top</a>
-  </div>
-</div><!-- End of page -->
+<div class="page-top">
+  <a href="#top" class="top" title="Go to the top of the page">↑ Back to top</a>
+</div>
