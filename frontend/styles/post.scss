@@ -3,30 +3,22 @@ Name: post.scss
 Description: Styles for articles / posts
 */
 
-.article {
-  margin-bottom: 1em;
-  margin-top: 1em;
-  padding: 2em;
+.post {
+  padding: 1em;
 }
 
-.page {
-  margin-bottom: 1em;
-  margin-top: 1em;
-  padding: 2em;
-}
-
-.articles {
+.posts-collection {
   padding: 1em;
   margin-bottom: 1em;
   margin-top: 1em;
-  border-bottom: .0625em solid var(--articles-separator-color);
+  border-bottom: .0625em solid var(--post-separator-color);
 }
 
-.articles:last-child {
+.posts-collection:last-child {
   border-bottom: 0;
 }
 
-.articles-footer-wrapper {
+.post-info {
   display: flex;
   align-items: center;
   flex-flow: row wrap;
@@ -34,7 +26,7 @@ Description: Styles for articles / posts
   justify-content: flex-start;
 }
 
-.articles-footer-avatar {
+.post-info__avatar {
   border-radius: 100%;
   margin-right: .5em;
 }
@@ -43,34 +35,22 @@ Description: Styles for articles / posts
   margin-bottom: 1em;
 }
 
-.primary-link,
-.primary-link:visited{
-  color: var(--main-text-color);
-  text-decoration: none;
-}
-
-.primary-link:hover,
-.primary-link:focus {
-  color: var(--articles-primary-link-color);
-  text-decoration: underline;
-}
-
-h2 .article-title,
-h2 .article-title:link,
-h2 .article-title:visited {
+h2 .post-title,
+h2 .post-title:link,
+h2 .post-title:visited {
   font-size: 1.5em;
   font-weight: 700;
-  color: var(--articles-title-color) !important;
+  color: var(--post-title-color) !important;
   line-height: 1.125;
   text-decoration: none !important;
 }
 
-.article-content {
+.post-content {
   margin-top: 2em;
 }
 
-.article-content > p:first-child::first-letter {
-  color: var(--articles-first-letter-color);
+.post-content > p:first-child::first-letter {
+  color: var(--post-first-letter-color);
   padding: 0 .3rem;
   margin: 0 .3rem 0 0;
   font-size: 4rem;
@@ -78,58 +58,47 @@ h2 .article-title:visited {
   line-height: 1;
 }
 
-.article-summary {
+.post-summary {
   font-size: .9em;
   border-top: .0625em solid #c2bed1;
   margin-top: .8em;
   padding-top: .5em;
 }
 
-.article-excerpt {
-  color: var(--articles-excerpt-color);
+.post-excerpt {
+  color: var(--post-excerpt-color);
   font-weight: 400;
 }
 
-.article a:link {
-  color: var(--articles-primary-link-color);
+.post a:link {
+  color: var(--post-primary-link-color);
   text-decoration: underline;
 }
 
-.article a:visited {
-  color: var(--articles-primary-link-visited-color);
+.post a:visited {
+  color: var(--post-primary-link-visited-color);
   text-decoration: underline;
 }
 
-.article-pubdate {
-  color: var(--articles-pubdate-color);
+.post-pubdate {
+  color: var(--post-pubdate-color);
   margin: 0;
   font-style: italic;
   font-size: 1em;
 }
 
-.article-categories {
-  display: inline-block;
-  margin-top: .5em;
-  width: 100%;
-}
-
-.article-author--link,
-.article-author--link:visited {
-  color: var(--articles-primary-link-color);
+.post-author__link,
+.post-author__link:visited {
+  color: var(--post-primary-link-color);
   text-decoration: none;
   font-weight: 600;
 }
 
-.article-author--link:hover{
+.post-author__link:hover {
   text-decoration: underline;
 }
 
-.article-footer {
-  margin-bottom: 2em;
-  margin-top: 2em;
-}
-
-.author-grid {
+.post-info--grid {
   display: grid;
   align-items: center;
   margin: 0 0 1.5rem;
@@ -141,81 +110,40 @@ h2 .article-title:visited {
   justify-content: stretch;
 }
 
-.author-avatar-area {
+.post-info--grid__avatar-area {
   grid-area: avatar;
 }
 
-.author-name-area {
+.post-info--grid__name-area {
   grid-area: author;
 }
 
-.published {
+.post-info--grid__published-area {
   grid-area: published;
 }
 
-.reading-area {
+.post-info--grid__readingtime-area {
   grid-area: time;
 }
 
-.author-avatar {
-  grid-area: avatar;
-  align-self: start;
-}
-
-.article-author-avatar {
+.post-author__avatar {
   border-radius: 50%;
   width: 2.5em;
   height: 2.5em;
 }
 
-.author-name-header,
-.published-header,
-.reading-header {
+.post-info--grid__header {
   font-weight: 600;
 }
 
-.published time,
-.reading-area .reading-time {
-  color: var(--articles-readingtime-color);
-}
-
-.article-top {
-  margin-top: 2em;
-  text-align: center;
-}
-
-.top:link,
-.top:visited,
-.top:hover,
-.top:active,
-.top:focus {
-  color: var(--articles-primary-link-color);
-}
-
-.fourofour-title {
-  font-size: calc(4em + 1vmin);
-  text-align: center;
-  margin: 0;
-  line-height: 1;
-}
-
-.fourofour-subtitle {
-  font-size: calc(.75em + .75vmin);
-  text-align: center;
-  line-height: 1;
-  margin: 0;
-}
-
-.fourofour-image {
-  width: 40%;
-  max-width: 80em;
-  min-width: 10em;
-  margin: 0 auto;
+.post-info--grid__published-area time,
+.post-info--grid__readingtime-area .post-reading-time {
+  color: var(--post-readingtime-color);
 }
 
 @media all and (max-width: 21em) {
 
-  .author-grid {
+  .post-info--grid {
     display: grid;
     align-items: center;
     margin: 0 0 1.5rem;
@@ -231,7 +159,7 @@ h2 .article-title:visited {
 
 @media all and (min-width: 31em) {
 
-  .author-grid {
+  .post-info--grid {
     display: grid;
     align-items: center;
     margin: 0 0 1.5rem;
@@ -247,7 +175,7 @@ h2 .article-title:visited {
 
 @media all and (min-width: 47em) {
 
-  .author-grid {
+  .post-info--grid {
     display: grid;
     align-items: center;
     margin: 0 0 1.5rem;
@@ -259,13 +187,13 @@ h2 .article-title:visited {
     justify-content: stretch;
   }
 
-  .article-author-avatar {
+  .post-author__avatar {
     border-radius: 50%;
     width: 5em;
     height: 5em;
   }
 
-  .articles-footer-wrapper {
+  .post-info {
     display: flex;
     align-items: center;
     flex-flow: row wrap;
@@ -273,22 +201,13 @@ h2 .article-title:visited {
     justify-content: flex-start;
   }
 
-  .article-wrapper {
-    margin: 0 auto;
-  }
-
-  h1.article-title {
+  h1.post-title {
     font-size: 3em;
-    color: var(--articles-title-color);
+    color: var(--post-title-color);
   }
 
-  .article-categories {
-    float: left;
-    width: 80%;
-  }
-
-  .article-pubdate {
-    color: var(--articles-pubdate-color);
+  .post-pubdate {
+    color: var(--post-pubdate-color);
     margin-left: .5em;
     font-size: 1em;
     font-style: italic;

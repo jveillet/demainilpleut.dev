@@ -9,45 +9,44 @@ layout: default
   {{ page.content | number_of_words | minus: 250 }}
 {% endcapture %}
 
-<div class="article-wrapper">
+<article class="post">
+  <h1 class="post-title">{{ page.title }}</h1>
 
-  <article class="article">
-  <h1 class="article-title">{{ page.title }}</h1>
-    <div class="author-grid">
-      <div class="author-avatar-area">
-        <img src="{{ author.avatar }}" width="80" height="80" alt="{{ author.name }}" class="article-author-avatar">
-      </div>
-      <div class="author-name-area">
-        <div class="author-name-header">Author</div>
-        {% assign author_url = 'authors/' | append: author.handle %}
-        <a class="author-name article-author--link" href="{{ author_url | relative_url }}">{{ author.name }}</a>
-      </div>
-      <div class="published">
-        <div class="published-header">Published</div>
-        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %d, %Y' }}</time>
-      </div>
-      <div class="reading-area">
-        <div class="reading-header">Reading time</div>
-        <span class="reading-time">
-        {% unless words contains "-" %}
-          {{ words | plus: 250 | divided_by: 180 | append: " minute(s)" | prepend: '~ ' }}
-        {% endunless %}
-        </span>
-      </div>
-    </div><!-- End of author-grid -->
-    <div class="tags">
-      {% for category in page.categories %}
-        <div class="tag-item">
-          {% assign cat = category | downcase | replace: ' ', '-' %}
-          <a href="{{ 'archives/' | append: cat | relative_url }}" class="tag-link">#{{ category }}</a>
-        </div>
-      {% endfor %}
+  <div class="post-info--grid">
+    <div class="post-info--grid__avatar-area">
+      <img src="{{ author.avatar }}" width="80" height="80" alt="{{ author.name }}" class="post-author__avatar">
     </div>
-    <div class="article-content">
-      {{ content }}
+    <div class="post-info--grid__name-area">
+      <div class="post-info--grid__header">Author</div>
+      {% assign author_url = 'authors/' | append: author.handle %}
+      <a class="post-author__link" href="{{ author_url | relative_url }}">{{ author.name }}</a>
     </div>
-    <div class="article-top">
-      <a href="#top" class="top" title="Go to the top of the page">↑ Back to top</a>
+    <div class="post-info--grid__published-area">
+      <div class="post-info--grid__header">Published</div>
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %d, %Y' }}</time>
     </div>
-  </article>
+    <div class="post-info--grid__readingtime-area">
+      <div class="post-info--grid__header">Reading time</div>
+      <span class="post-reading-time">
+      {% unless words contains "-" %}
+        {{ words | plus: 250 | divided_by: 180 | append: " minute(s)" | prepend: '~ ' }}
+      {% endunless %}
+      </span>
+    </div>
+  </div><!-- End of post-info--grid -->
+  <div class="tags">
+    {% for category in page.categories %}
+      <div class="tag-item">
+        {% assign cat = category | downcase | replace: ' ', '-' %}
+        <a href="{{ 'archives/' | append: cat | relative_url }}" class="tag-link">#{{ category }}</a>
+      </div>
+    {% endfor %}
+  </div>
+  <div class="post-content">
+    {{ content }}
+  </div>
+</article>
+
+<div class="page-top">
+  <a href="#top" class="top" title="Go to the top of the page">↑ Back to top</a>
 </div>

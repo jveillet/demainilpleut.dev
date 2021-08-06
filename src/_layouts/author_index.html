@@ -1,41 +1,39 @@
 ---
-layout: default
+layout: page
 ---
 
 {% assign author = site.data.authors[page.author] %}
 
-<div class="page-author">
-  <div class="breadcrumbs">
-    <div class="breadcrumb-item"><a href="{% link _pages/authors.html %}" class="breadcrumb-icon">Authors</a></div>
-    <div class="breadcrumb-item breadcrumb-item--active">{{ author.name }}</div>
-  </div>
+<div class="breadcrumbs">
+  <div class="breadcrumb-item"><a href="{% link _pages/authors.html %}" class="breadcrumb-icon">Authors</a></div>
+  <div class="breadcrumb-item breadcrumb-item--active">{{ author.name }}</div>
+</div>
 
-  <div class="page-author">
-    <h1>{{ author.name }}</h1>
+<h1>{{ author.name }}</h1>
 
-    <div class="page-author-avatar">
-      <img src="{{ author.avatar }}" alt="{{ author.handle }}" class="avatar avatar--size">
-    </div>
+<div class="page-author-avatar">
+  <img src="{{ author.avatar }}" alt="{{ author.handle }}" class="avatar avatar--size">
+</div>
 
-    <div class="article-excerpt archives-spacing">{{ author.description }}</div>
+<h2>About me</h2>
+<div class="post-excerpt mb-2">{{ author.description }}</div>
 
-    <div class="archives archives-spacing">
-      {% render "author_links" site: site, author: author %}
-    </div>
+<h2>Where to find me</h2>
+<div class="mb-2">
+    {% render "author_links" site: site, author: author %}
+</div>
 
-  <div class="archives">
-    <span class="section-title">Articles by {{ author.name }}</span>
-    <ol class="list-unordered" start="1" type="1">
-      {% for post in site.posts %}
-        {% if author.handle == post.author %}
-          <li>
-            <a href="{{ post.url | relative_url }}" class="primary-link">{{ post.title }}</a>
-          </li>
-        {% endif %}
-      {% endfor %}
-    </ol>
-  </div>
+<h2>Articles I contributed to</h2>
+<ol class="list-unordered" start="1" type="1">
+  {% for post in site.posts %}
+    {% if author.handle == post.author %}
+      <li>
+        <a href="{{ post.url | relative_url }}" class="primary-link">{{ post.title }}</a>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ol>
 
-  </div>
-
+<div class="page-top">
+  <a href="#top" class="top" title="Go to the top of the page">↑ Back to top</a>
 </div>

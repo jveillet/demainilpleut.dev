@@ -1,0 +1,47 @@
+/**
+Name: page.scss
+Description: Styles for pages.
+*/
+
+.page {
+  padding: 1em;
+}
+
+.page-top {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+.top:link,
+.top:visited,
+.top:hover,
+.top:active,
+.top:focus {
+  color: var(--post-primary-link-color);
+}
+
+/**
+ * Specific to the 404 page
+ */
+
+.page-centered-title {
+  font-size: calc(4em + 1vmin);
+  text-align: center;
+  margin: 0;
+  line-height: 1;
+}
+
+.page-centered-subtitle {
+  font-size: calc(.75em + .75vmin);
+  text-align: center;
+  line-height: 1;
+  margin: 0;
+}
+
+.page-centered-image {
+  width: 40%;
+  max-width: 80em;
+  min-width: 10em;
+  margin: 0 auto;
+}
