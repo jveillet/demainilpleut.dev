@@ -156,10 +156,7 @@ html {
   line-height: 1.5;
   margin: 0;
   padding: 0;
-  min-height: 100%;
   text-size-adjust: 100%;
-  height: 100%;
-  overflow: hidden;
 }
 
 body {
@@ -167,11 +164,9 @@ body {
   background-color: var(--main-background-color);
   color: var(--main-text-color);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  height: 100%;
   margin: 0;
   padding: 0;
-  width: 100%;
-  overflow: scroll;
+  overflow: auto;
   -webkit-overflow-scrolling: touch;
   text-rendering: optimizeSpeed;
 }
@@ -318,6 +313,20 @@ a, b, strong, dt {
   color: var(--post-primary-link-color);
   text-decoration: underline;
 }
+
+/** Push the footer to the bottom **/
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+//***********************************
 
 @import "utilities";
 @import "alert";
