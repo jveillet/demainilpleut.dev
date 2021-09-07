@@ -20,8 +20,12 @@
   {% else %}
   <meta name="twitter:description" content="{{ site.metadata.tagline }}">
   {% endif %}
-  <meta name="twitter:image" content="{{ site.metadata.logo | absolute_url }}">
-  <meta name="twitter:card"  content="summary">
+  {% if page.og_image %}
+  <meta name="twitter:image" content="{{ page.og_image }}">
+  {% else %}
+  <meta name="twitter:image" content="{{ site.metadata.opengraph | absolute_url }}">
+  {% endif %}
+  <meta name="twitter:card"  content="summary_large_image">
   {% endif %}
   <meta name="theme-color" content="#ffffff"/>
   <meta name="color-scheme" content="dark light">
