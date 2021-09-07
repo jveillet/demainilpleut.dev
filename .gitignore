@@ -4,6 +4,7 @@ public
 .bridgetown-cache
 .bridgetown-metadata
 .bridgetown-webpack
+src/images/opengraph/*
 
 # Dependency folders
 node_modules
