@@ -20,7 +20,7 @@ ruby '3.0.2'
 #
 # Happy Bridgetowning!
 
-gem "bridgetown", "~> 0.21.3"
+gem "bridgetown", "~> 0.21.4"
 
 # Rake is a Make-like program implemented in Ruby.
 gem 'rake', '~> 13.0.3'
