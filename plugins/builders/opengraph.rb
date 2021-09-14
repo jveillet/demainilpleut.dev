@@ -12,7 +12,9 @@ class Opengraph < SiteBuilder
         image_path = "#{dest_path }/#{image_name}"
         tags = post_tags(post)
         date = post.data[:date]
-        if !File.exist?(image_path) || force?
+        if !File.exist?(image_path)
+          system("node opengraph/index.js -t \"#{post.data[:title]}\" -a \"#{post.data[:author]}\" -f #{image_path} -l #{tags} -d #{date}")
+        elsif force?
           system("node opengraph/index.js -t \"#{post.data[:title]}\" -a \"#{post.data[:author]}\" -f #{image_path} -l #{tags} -d #{date}")
         end
 
@@ -32,7 +34,7 @@ class Opengraph < SiteBuilder
   end
 
   def deploy_preview?
-    ENV.fetch('CONTEXT', '').to_s == 'deploy-preview' || ENV.fetch('CONTEXT', '').to_s == 'branch-deploy'
+    %w[deploy-preview branch-deploy].include? ENV.fetch('CONTEXT', '').to_s
   end
 
   def netlify?
