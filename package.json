@@ -47,7 +47,7 @@
     "mini-css-extract-plugin": "^2.3.0",
     "sass": "^1.42.1",
     "sass-loader": "^12.1.0",
-    "webpack": "^5.54.0",
+    "webpack": "^5.55.1",
     "webpack-cli": "^4.8.0",
     "webpack-manifest-plugin": "^4.0.2",
     "webpack-merge": "^5.8.0"
