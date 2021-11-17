@@ -33,7 +33,7 @@
     "browser-sync": "^2.27.7",
     "clean-webpack-plugin": "^4.0.0",
     "eslint": "^8.2.0",
-    "stylelint": "^13.13.1"
+    "stylelint": "^14.1.0"
   },
   "dependencies": {
     "canvas": "^2.8.0",
