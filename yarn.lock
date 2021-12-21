@@ -1402,10 +1402,10 @@ esbuild-linux-ppc64le@0.14.5:
   resolved "https://registry.yarnpkg.com/esbuild-linux-ppc64le/-/esbuild-linux-ppc64le-0.14.5.tgz#5fa1178c7d7ebd13056c7ccd0604653b0ccc2264"
   integrity sha512-usfQrVVIQcpuc/U2NWc7/Ry+m622v+PjJ5eErNPdjWBPlcvD6kXaBTv94uQkVzZOHX3uYqprRrOjseed9ApSYA==
 
-esbuild-loader@^2.17.0:
-  version "2.17.0"
-  resolved "https://registry.yarnpkg.com/esbuild-loader/-/esbuild-loader-2.17.0.tgz#7caff8f92c30345555c9d2a659e7fc29d6d7d874"
-  integrity sha512-hR/qg+LZltCFMuUGqRa9WKE3Z5/A4pEsxW7PP1N3f5ecoVN75BotxQYgyLDRERekRAi6e+uRQBEPuuR3dA4Z3w==
+esbuild-loader@^2.17.1:
+  version "2.17.1"
+  resolved "https://registry.yarnpkg.com/esbuild-loader/-/esbuild-loader-2.17.1.tgz#5a1bdfde6d83f3e0713062c114c0ea89d432de34"
+  integrity sha512-AQkaQa50MtAvJcNYfYoHj7Kv2aanW6D0lBui6rCptIeqrvClkzRn5spvdgMLJZ8s8qa1mdXZejhKUrRPD/JlcA==
   dependencies:
     esbuild "^0.14.2"
     joycon "^3.0.1"
