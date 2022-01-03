@@ -1,4 +1,4 @@
-FROM ruby:3.0.3
+FROM ruby:3.1.0
 
 # Environment variables
 ENV DEBIAN_FRONTEND noninteractive
@@ -26,6 +26,7 @@ RUN mkdir -p /app
 
 WORKDIR /app
 
+COPY .ruby-version ./
 COPY Gemfile* ./
 
 RUN bundle config
