@@ -3,7 +3,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.0.3'
+ruby File.read(".ruby-version").strip
 
 # Hello! This is where you manage which Bridgetown version is used to run.
 # When you want to use a different version, change it below, save the
