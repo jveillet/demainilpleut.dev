@@ -20,7 +20,7 @@ ruby File.read(".ruby-version").strip
 #
 # Happy Bridgetowning!
 
-gem "bridgetown", "~> 0.21.5"
+gem "bridgetown", "~> 1.0.0"
 
 # Rake is a Make-like program implemented in Ruby.
 gem 'rake', '~> 13.0.3'
