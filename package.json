@@ -44,7 +44,7 @@
     "esbuild": "^0.14.22",
     "esbuild-loader": "^2.18.0",
     "file-loader": "^6.2.0",
-    "mini-css-extract-plugin": "^2.5.3",
+    "mini-css-extract-plugin": "^2.6.0",
     "sass": "^1.49.9",
     "sass-loader": "^12.6.0",
     "webpack": "^5.69.0",
