@@ -36,7 +36,7 @@
     "stylelint": "^14.5.3"
   },
   "dependencies": {
-    "canvas": "^2.9.0",
+    "canvas": "^2.9.1",
     "commander": "^9.1.0",
     "concurrently": "^7.0.0",
     "css-loader": "^6.7.1",
