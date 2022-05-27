@@ -41,7 +41,7 @@
     "concurrently": "^7.0.0",
     "css-loader": "^6.7.1",
     "css-minimizer-webpack-plugin": "^3.4.1",
-    "esbuild": "^0.14.29",
+    "esbuild": "^0.14.40",
     "esbuild-loader": "^2.18.0",
     "file-loader": "^6.2.0",
     "mini-css-extract-plugin": "^2.6.0",
