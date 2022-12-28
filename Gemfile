@@ -1,29 +1,36 @@
-# frozen_string_literal: true
-
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby File.read(".ruby-version").strip
-
-# Hello! This is where you manage which Bridgetown version is used to run.
-# When you want to use a different version, change it below, save the
-# file and run `bundle install`. Run Bridgetown with `bundle exec`, like so:
+####
+# Welcome to your project's Gemfile, used by Rubygems & Bundler.
 #
-#   bundle exec bridgetown serve
+# To install a plugin, run:
+#
+#   bundle add new-plugin-name -g bridgetown_plugins
+#
+# This will ensure the plugin is added to the correct Bundler group.
+#
+# When you run Bridgetown commands, we recommend using a binstub like so:
+#
+#   bin/bridgetown start (or console, etc.)
 #
 # This will help ensure the proper Bridgetown version is running.
-#
-# To install a plugin, simply run bundle add and specify the group
-# "bridgetown_plugins". For example:
-#
-#   bundle add some-new-plugin -g bridgetown_plugins
-#
-# Happy Bridgetowning!
+####
 
-gem "bridgetown", "~> 0.21.5"
+# If you need to upgrade/switch Bridgetown versions, change the line below
+# and then run `bundle update bridgetown`
+gem "bridgetown", "~> 1.1.0"
 
-# Rake is a Make-like program implemented in Ruby.
-gem 'rake', '~> 13.0.3'
+# Uncomment to add file-based dynamic routing to your project:
+# gem "bridgetown-routes", "~> 1.1.0", group: :bridgetown_plugins
+
+# Uncomment to use the Inspectors API to manipulate the output
+# of your HTML or XML resources:
+# gem "nokogiri", "~> 1.13"
+
+# Puma is a Rack-compatible server used by Bridgetown
+# (you can optionally limit this to the "development" group)
+gem "puma", "~> 5.6"
 
 group :bridgetown_plugins do
   # A Bridgetown plugin to generate an Atom feed of your Bridgetown posts
@@ -32,5 +39,5 @@ end
 
 group :development, :test do
   # Test your rendered HTML files to make sure they're accurate.
-  gem 'html-proofer', '~> 3.19'
+  gem 'html-proofer', '~> 5.0', '>= 5.0.3'
 end

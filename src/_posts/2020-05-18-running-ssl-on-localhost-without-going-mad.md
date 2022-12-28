@@ -3,7 +3,8 @@ excerpt_separator: <!--readmore-->
 layout: post
 title: 'Running SSL on localhost without going mad'
 published_at: 2020-05-18T17:30:00+00:00
-categories: [ssl, local, command line]
+tags: [ssl, local, command line]
+category: blog
 permalink: /:title/
 author: jveillet
 summary: 'Use SSL for your local dev environment using mkcert'

@@ -3,7 +3,8 @@ excerpt_separator: <!--readmore-->
 layout: post
 title: 'Introducing first draft of the Styleguide'
 published_at: 2016-01-19T18:08:00+00:00
-categories: [blog related, css]
+tags: [blog related, css]
+category: blog
 permalink: /:title/
 author: jveillet
 ---
@@ -16,7 +17,7 @@ When you work in a team, it's always great to have a common place to share the v
 
 <!--readmore-->
 
-There is a lot of techniques and  methodologies this days to help you achieve that goal, to name a few [BEM](https://en.bem.info/), [ITCSS](https://www.youtube.com/watch?v=1OKZOV-iLj4&feature=youtu.be), [OOCSS](http://oocss.org/), [SMACSS](https://smacss.com/), you can also read the great Brad Frost's book about [Atomic Design](https://shop.bradfrost.com/), which was a great inspiration.
+There is a lot of techniques and  methodologies this days to help you achieve that goal, to name a few [BEM](https://en.bem.info/), [ITCSS](https://www.youtube.com/watch?v=1OKZOV-iLj4&feature=youtu.be), [OOCSS](https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss/), [SMACSS](https://smacss.com/), you can also read the great Brad Frost's book about [Atomic Design](https://shop.bradfrost.com/), which was a great inspiration.
 
 ## How ?
 

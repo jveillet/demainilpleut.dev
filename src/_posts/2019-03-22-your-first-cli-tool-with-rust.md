@@ -3,7 +3,8 @@ excerpt_separator: <!--readmore-->
 layout: post
 title: 'Your first CLI tool with Rust'
 published_at: 2019-03-22T18:00:00+00:00
-categories: [rust, cli, command line, beginner]
+tags: [rust, cli, command line, beginner]
+category: blog
 permalink: /:title/
 author: jveillet
 summary: 'Learn how to build your first CLI tool with Rust'

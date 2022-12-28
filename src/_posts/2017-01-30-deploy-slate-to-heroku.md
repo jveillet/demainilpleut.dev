@@ -3,7 +3,8 @@ excerpt_separator: <!--readmore-->
 layout: post
 title: 'Deploy Slate to Heroku'
 published_at: 2017-01-30T18:10:00+00:00
-categories: [code, ruby, middleman, heroku]
+tags: [code, ruby, middleman, heroku]
+category: blog
 permalink: /:title/
 author: jveillet
 summary: 'Learn how to deploy the Slate documentation, and build the assets automatically on Heroku'

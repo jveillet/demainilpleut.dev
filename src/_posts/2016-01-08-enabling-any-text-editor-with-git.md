@@ -3,7 +3,8 @@ excerpt_separator: <!--readmore-->
 layout: post
 title: 'Enabling any text editor with git'
 published_at: 2016-01-08T15:58:00+00:00
-categories: [git, editor, commit]
+tags: [git, editor, commit]
+category: blog
 permalink: /:title/
 author: jveillet
 summary: 'How to enable any text editor to work with git commands'
@@ -43,6 +44,6 @@ Now every time the command `git commit` will be invoked, SublimeText will be the
 ## Resources
 
 - [SublimeText `Command Line Interface` documentation](https://www.sublimetext.com/docs/command_line.html).
-- [Configure the PATH variable in Windows](http://www.computerhope.com/issues/ch000549.htm).
+- [Configure the PATH variable in Windows](https://www.computerhope.com/issues/ch000549.htm).
 - [Configure a symlink in OSX](https://apple.stackexchange.com/questions/115646/how-can-i-create-a-symbolic-link-in-terminal?rq=1).
 - [Associating text editors with git](https://help.github.com/articles/associating-text-editors-with-git/) - Github help page.

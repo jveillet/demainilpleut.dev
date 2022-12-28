@@ -1,0 +1,26 @@
+<article class="posts-collection">
+  <h2>
+    <a href="{{ post.relative_url }}" class="post-title">{{ post.title }}</a>
+  </h2>
+  <div class="post-info mb-1">
+    <div class="post-info-pubdate">
+      <img
+        class="post-pubdate-icon"
+        src="/images/clock.svg"
+        widht="24"
+        heigh="24"
+        aria-hidden="true">
+      <span class="post-pubdate">
+        <time datetime="{{ post.date | date_to_xmlschema }}">Published on {{ post.date | date: '%B %d, %Y' }}</time>
+      </span>
+    </div>
+  </div>
+  <!-- end of post-info -->
+  <div class="post-excerpt mb-1">
+    {{ post.content | truncatewords: 80 | strip_html }}
+  </div>
+
+  <div class="post-read-more">
+    <a href="{{ post.relative_url }}" class="btn btn--primary">Read article</a>
+  </div>
+</article>

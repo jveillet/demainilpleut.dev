@@ -3,7 +3,8 @@ excerpt_separator: <!--readmore-->
 layout: post
 title: 'How to clean up local git branches matching a name'
 published_at: 2016-01-21T18:00:00+00:00
-categories: [git]
+tags: [git]
+category: blog
 permalink: /:title/
 author: jveillet
 summary: 'How to clean your local Git branches'

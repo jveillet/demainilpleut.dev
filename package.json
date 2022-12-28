@@ -1,55 +1,24 @@
 {
   "name": "demainilpleut.dev",
-  "version": "4.0.0",
+  "version": "1.0.0",
   "private": true,
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jveillet/demainilpleut.dev.git"
-  },
-  "author": "Jérémie Veillet",
-  "license": "GPL v3",
-  "bugs": {
-    "url": "https://github.com/jveillet/demainilpleut.dev/issues"
-  },
-  "engines": {
-    "node": ">= 14.17.4",
-    "npm": ">= 6.14.14",
-    "yarn": ">= 1.22.5"
-  },
   "scripts": {
-    "build": "BRIDGETOWN_ENV=production bundle exec bridgetown build",
-    "serve": "bundle exec bridgetown serve",
-    "clean": "bundle exec bridgetown clean",
-    "webpack-build": "webpack --mode production",
-    "webpack-dev": "webpack --mode development -w",
-    "deploy": "yarn clean && yarn webpack-build && yarn build",
-    "sync": "node sync.js",
-    "start": "node start.js",
-    "lint:js": "eslint ./frontend/javascript/index.js",
-    "lint:css": "stylelint ./frontend/styles/",
-    "lint": "yarn lint:js && yarn lint:css"
+    "esbuild": "node esbuild.config.js --minify",
+    "esbuild-dev": "node esbuild.config.js --watch"
   },
   "devDependencies": {
-    "browser-sync": "^2.27.9",
-    "clean-webpack-plugin": "^4.0.0",
-    "eslint": "^8.12.0",
-    "stylelint": "^14.6.1"
+    "esbuild": "^0.14.39",
+    "glob": "^8.0.1",
+    "postcss": "^8.4.12",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-import": "^14.1.0",
+    "postcss-load-config": "^3.1.4",
+    "postcss-preset-env": "^7.4.3"
   },
   "dependencies": {
     "canvas": "^2.9.1",
     "commander": "^9.1.0",
     "concurrently": "^7.0.0",
-    "css-loader": "^6.7.1",
-    "css-minimizer-webpack-plugin": "^3.4.1",
-    "esbuild": "^0.14.29",
-    "esbuild-loader": "^2.19.0",
-    "file-loader": "^6.2.0",
-    "mini-css-extract-plugin": "^2.6.0",
-    "sass": "^1.49.10",
-    "sass-loader": "^12.6.0",
-    "webpack": "^5.70.0",
-    "webpack-cli": "^4.9.2",
-    "webpack-manifest-plugin": "^5.0.0",
-    "webpack-merge": "^5.8.0"
+    "file-loader": "^6.2.0"
   }
 }

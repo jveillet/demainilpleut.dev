@@ -2,7 +2,7 @@ jveillet:
   display: true
   name: Jérémie Veillet
   handle: jveillet
-  description: Jérémie is a french software developer from La Rochelle, France. he is currently working at macompta.fr, and he loves art in every shape and form.
+  description: Howdy 👋️ !<br> I am Jérémie and this is my little corner on the web.<br>I am a software engineer from France, and I am currently a Tech Lead at <a href="https://www.macompta.fr" target="_new">macompta.fr</a>. I mostly write about programming stuff, but I have broader interests I may also talk about.<br> I love the web, photography, comics, Crossfit, and occasionally making silly puns.
   avatar: https://avatars1.githubusercontent.com/u/5037407?v=3&s=460
   web:
     handle: demainilpleut.dev
@@ -12,4 +12,5 @@ jveillet:
   linkedin: jveillet
   gitlab: jveillet
   devto: jveillet
-  permalink: authors/jveillet/
+  mastodon: jveillet
+  permalink: about-me

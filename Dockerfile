@@ -1,4 +1,4 @@
-FROM ruby:3.1.0
+FROM ruby:3.1.3
 
 # Environment variables
 ENV DEBIAN_FRONTEND noninteractive
@@ -41,4 +41,4 @@ EXPOSE 4000
 EXPOSE 4001
 EXPOSE 4002
 
-CMD ["yarn", "start"]
+CMD ["bin/bridgetown", "start"]

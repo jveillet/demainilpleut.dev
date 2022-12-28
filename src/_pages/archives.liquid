@@ -1,0 +1,34 @@
+---
+layout: page
+permalink: /archives/
+---
+
+<h1>Archives</h1>
+
+<div class="post-excerpt">
+  Welcome to the archives. Here you can find all of the posts made over the
+  years, the most popular stuff, the bad, the ugly and the usefull.
+</div>
+
+<div class="archives">
+  {% assign all_years = collections.posts.resources | map: "date" %}
+  {% assign years = "" | split: "," %}
+  {% for item in all_years %}
+    {% assign y = item | date: '%Y' %}
+    {% assign years = years | push: y %}
+  {% endfor %}
+
+  {% assign years = years | uniq %}
+
+  {% for item in years %}
+    <h2>{{ item }}</h2>
+    <ul class="list-unordered">
+      {% assign postsByYear = collections.posts.resources | where: 'date', item %}
+      {% for p in postsByYear %}
+        <li class="archives-link">
+          <a href="{{ p.relative_url }}">{{ p.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+</div>
