@@ -1,0 +1,31 @@
+---
+layout: page
+permalink: /about-me/index.html
+author: jveillet
+---
+
+{% assign author = site.data.authors[page.author] %}
+
+<h1>{{ author.name }}</h1>
+
+<div class="page-author-avatar">
+  <img
+    src="{{ author.avatar }}"
+    alt="{{ author.handle }}"
+    class="avatar avatar--size">
+</div>
+
+<h2>About me</h2>
+<div class="post-excerpt mb-2">{{ author.description }}</div>
+
+<h2>Where to find me</h2>
+<div class="mb-2">
+  {% render "author_links" site: site, author: author %}
+</div>
+
+<div class="page-top">
+  <a
+    href="#top"
+    class="top"
+    title="Go to the top of the page">↑ Back to top</a>
+</div>

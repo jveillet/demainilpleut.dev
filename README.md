@@ -43,7 +43,7 @@ docker-compose build && docker-compose up
 
 ## Development
 
-To start your site in development mode, run `yarn start` and navigate to [localhost:4000](https://localhost:4000/)!
+To start your site in development mode, run `bin/bridgetown start` and navigate to [localhost:4000](https://localhost:4000/)!
 
 The same applies to the Docker installation, run `docker-compose up` and the website is available at the same address.
 
@@ -51,13 +51,13 @@ The same applies to the Docker installation, run `docker-compose up` and the web
 
 ```sh
 # running locally
-yarn start
+bin/bridgetown start
 
 # build & deploy to production
-yarn deploy
+bin/bridgetown deploy
 
 # load the site up within a Ruby console (IRB)
-bundle exec bridgetown console
+bin/bridgetown console
 ```
 
 > Learn more: [Bridgetown CLI Documentation](https://www.bridgetownrb.com/docs/command-line-usage)

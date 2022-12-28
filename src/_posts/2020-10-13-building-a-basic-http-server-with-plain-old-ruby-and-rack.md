@@ -3,7 +3,8 @@ excerpt_separator: <!--readmore-->
 layout: post
 title: 'Building a basic HTTP server with plain old Ruby & Rack'
 published_at: 2020-10-13T12:00:00+00:00
-categories: [ruby, server, static files]
+tags: [ruby, server, static files]
+category: blog
 permalink: /:title/
 author: jveillet
 summary: 'Build a basic HTTP server with Ruby to serve static files.'
@@ -135,7 +136,7 @@ app = Rack::Builder.new do
   end
 end
 
-# Options, like port, logs, SSL config, etc..
+# Options, like port, logs, SSL config, etc..
 webrick_options = {
   Port: 3000,
   Logger: WEBrick::Log.new($stdout, WEBrick::Log::DEBUG),
@@ -145,7 +146,7 @@ webrick_options = {
 # Launch Webrick server
 Rack::Handler::WEBrick.run app, webrick_options
 
-# Shutdown the server with CTRL + C
+# Shutdown the server with CTRL + C
 Signal.trap 'INT' do
   Rack::Handler::WEBrick.shutdown
 end

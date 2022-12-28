@@ -4,7 +4,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.metadata.myvariable }}.
 
-title: demain·il·pleut
+title: demainilpleut.dev
 tagline: Coding & Design for the rainy days
 description:
 logo: images/logo.png

@@ -3,7 +3,8 @@ excerpt_separator: <!--readmore-->
 layout: post
 title: 'Saving your back in git'
 published_at: 2018-07-17T18:00:00+00:00
-categories: [git, commands]
+tags: [git, commands]
+category: blog
 permalink: /:title/
 author: jveillet
 summary: 'Common situations with Git and how to resolve them'
@@ -169,4 +170,4 @@ git diff -- . ":(exclude)*.min.js" ":(exclude)*.min.css"
 
 ## Usefull resources {#usefull-resources}
 
-- [Oh, shit, git](http://ohshitgit.com/)
+- [Oh, shit, git](https://ohshitgit.com/)

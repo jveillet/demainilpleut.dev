@@ -1,0 +1,232 @@
+/**
+Name: post.scss
+Description: Styles for articles / posts
+*/
+
+.post {
+  padding: 1em;
+}
+
+.posts-collection {
+  padding: 1em;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  border-bottom: .0625em solid var(--post-separator-color);
+}
+
+.posts-collection:last-child {
+  border-bottom: 0;
+}
+
+.post-info {
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.post-info__avatar {
+  border-radius: 100%;
+  margin-right: .5em;
+}
+
+.post-tags {
+  margin-bottom: 1em;
+}
+
+h2 .post-title,
+h2 .post-title:link,
+h2 .post-title:visited {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: var(--post-title-color) !important;
+  line-height: 1.125;
+  text-decoration: none !important;
+}
+
+.post-content {
+  margin-top: 2em;
+}
+
+.post-content > p:first-child::first-letter {
+  color: var(--post-first-letter-color);
+  padding: 0 .3rem;
+  margin: 0 .3rem 0 0;
+  font-size: 4rem;
+  float: left;
+  line-height: 1;
+}
+
+.post-summary {
+  font-size: .9em;
+  border-top: .0625em solid #c2bed1;
+  margin-top: .8em;
+  padding-top: .5em;
+}
+
+.post-excerpt {
+  color: var(--post-excerpt-color);
+  font-weight: 400;
+}
+
+.post a:link {
+  color: var(--post-primary-link-color);
+  text-decoration: underline;
+}
+
+.post a:visited {
+  color: var(--post-primary-link-visited-color);
+  text-decoration: underline;
+}
+
+.post-pubdate {
+  color: var(--post-pubdate-color);
+  margin: 0;
+  font-style: italic;
+  font-size: 1em;
+}
+
+.post-author__link,
+.post-author__link:visited {
+  color: var(--post-primary-link-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.post-author__link:hover {
+  text-decoration: underline;
+}
+
+.post-info--grid {
+  display: grid;
+  align-items: center;
+  margin: 0 0 1.5rem;
+  grid-template-columns: .8fr;
+  grid-template-areas: "avatar author" "published time";
+  white-space: nowrap;
+  font-size: .8em;
+  grid-gap: .75rem;
+  justify-content: stretch;
+}
+
+.post-info--grid__avatar-area {
+  grid-area: avatar;
+}
+
+.post-info--grid__name-area {
+  grid-area: author;
+}
+
+.post-info--grid__published-area {
+  grid-area: published;
+}
+
+.post-info--grid__readingtime-area {
+  grid-area: time;
+}
+
+.post-author__avatar {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+}
+
+.post-info--grid__header {
+  font-weight: 600;
+}
+
+.post-info--grid__published-area time,
+.post-info--grid__readingtime-area .post-reading-time {
+  color: var(--post-readingtime-color);
+}
+
+@media all and (max-width: 21em) {
+
+  .post-info--grid {
+    display: grid;
+    align-items: center;
+    margin: 0 0 1.5rem;
+    grid-template-columns: .8fr;
+    grid-template-areas: "avatar" "author" "published" "time";
+    white-space: nowrap;
+    font-size: .9em;
+    grid-gap: .7rem;
+    justify-content: stretch;
+  }
+
+}
+
+@media all and (min-width: 31em) {
+
+  .post-info--grid {
+    display: grid;
+    align-items: center;
+    margin: 0 0 1.5rem;
+    grid-template-columns: min-content;
+    grid-template-areas: "avatar author published time";
+    white-space: nowrap;
+    font-size: .8em;
+    grid-gap: .8rem;
+    justify-content: stretch;
+  }
+
+}
+
+@media all and (min-width: 47em) {
+
+  .post-info--grid {
+    display: grid;
+    align-items: center;
+    margin: 0 0 1.5rem;
+    grid-template-columns: min-content min-content min-content min-content;
+    grid-template-areas: "avatar author published time";
+    white-space: nowrap;
+    font-size: 1em;
+    grid-gap: .5rem 2rem;
+    justify-content: stretch;
+  }
+
+  .post-author__avatar {
+    border-radius: 50%;
+    width: 5em;
+    height: 5em;
+  }
+
+  .post-info {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  h1.post-title {
+    font-size: 3em;
+    color: var(--post-title-color);
+  }
+
+  .post-info-pubdate {
+    background-color: var(--orange-500);
+    border-radius: .25em;
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: .3em;
+  }
+
+  .post-pubdate-icon {
+    height: 1em;
+    width: 1em;
+    margin-right: .5em;
+  }
+
+  .post-pubdate {
+    color: var(--white-500);
+    font-size: .8em;
+    font-style: italic;
+  }
+
+}

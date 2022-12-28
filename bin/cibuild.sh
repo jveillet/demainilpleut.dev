@@ -7,7 +7,7 @@ export NOKOGIRI_USE_SYSTEM_LIBRARIES=true
 export LANG=C.UTF-8
 
 # Build for deploy
-yarn deploy
+bundle exec rake deploy
 
 # Test the HTML of the site
-time BRIDGETOWN_ENV=test bundle exec rake test:proofer
+time BRIDGETOWN_ENV=test bundle exec rake proofer:test

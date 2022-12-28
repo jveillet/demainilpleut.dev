@@ -1,0 +1,41 @@
+/**
+/**
+Name: tags.scss
+Description: Styles for tags.
+*/
+
+.tags {
+  margin-top: 1em;
+  font-size: .8em;
+  font-weight: 600;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.tag-item {
+  margin-right: .5em;
+  border-radius: 5%;
+  margin-top: .5em;
+  padding: .5em;
+  text-decoration: none;
+}
+
+a.tag-link:link,
+a.tag-link:hover,
+a.tag-link:visited {
+  color: var(--tag-color);
+  text-decoration-color: var(--tag-underline-color);
+  text-underline-offset: .25em;
+}
+
+@media all and (min-width: 47em) {
+
+  .tags {
+    font-size: 1em;
+  }
+
+}

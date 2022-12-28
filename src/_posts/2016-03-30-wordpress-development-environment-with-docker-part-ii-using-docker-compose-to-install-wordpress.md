@@ -3,7 +3,8 @@ excerpt_separator: <!--readmore-->
 layout: post
 title: 'Wordpress development environment with Docker Part II: Using Docker Compose to install WordPress'
 published_at: 2016-03-30T17:12:00+00:00
-categories: [code, wordpress]
+tags: [code, wordpress]
+category: blog
 permalink: /:title/
 author: jveillet
 image:

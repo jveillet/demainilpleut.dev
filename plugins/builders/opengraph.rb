@@ -1,30 +1,31 @@
 ##
-# Bridgetown plugin to generate dynamically each post opengraph image.
+# Bridgetown plugin to generate dynamically each post opengraph image.
 #
-class Opengraph < SiteBuilder
+class Builders::Opengraph < SiteBuilder
   def build
     return unless ENV.fetch('BRIDGETOWN_ENV', 'development') == 'production'
 
     generator do
-      site.posts.each do |post|
-        dest_path = "#{Dir.pwd}/src/images/opengraph"
-        image_name = "#{post_id(post)}.png"
-        image_path = "#{dest_path }/#{image_name}"
-        tags = post_tags(post)
-        date = post.data[:date]
-        if !File.exist?(image_path)
-          system("node opengraph/index.js -t \"#{post.data[:title]}\" -a \"#{post.data[:author]}\" -f #{image_path} -l #{tags} -d #{date}")
-        elsif force?
-          system("node opengraph/index.js -t \"#{post.data[:title]}\" -a \"#{post.data[:author]}\" -f #{image_path} -l #{tags} -d #{date}")
-        end
+      site.collections.posts.resources.each do |post|
+      dest_path = "#{Dir.pwd}/src/images/opengraph"
+      image_name = "#{post_id(post)}.png"
+      image_path = "#{dest_path }/#{image_name}"
+      tags = post_tags(post)
+      date = post.data[:date]
 
-        # Add the OpenGraph image URL into the dpost data to be available in templates
-        post.data[:og_image] = generate_image_url(site, "images/opengraph/#{image_name}")
-         # Initialize a new StaticFile.
-        site.static_files << Bridgetown::StaticFile.new(site, "#{Dir.pwd}/src/", 'images/opengraph', image_name)
+      if !File.exist?(image_path)
+        system("node opengraph/index.js -t \"#{post.data[:title]}\" -a \"#{post.data[:author]}\" -f #{image_path} -l #{tags} -d #{date}")
+      elsif force?
+        system("node opengraph/index.js -t \"#{post.data[:title]}\" -a \"#{post.data[:author]}\" -f #{image_path} -l #{tags} -d #{date}")
       end
+
+      # Add the OpenGraph image URL into the post data to be available in templates
+      post.data[:og_image] = generate_image_url(site, "images/opengraph/#{image_name}")
+      # Initialize a new StaticFile.
+      site.static_files << Bridgetown::StaticFile.new(site, "#{Dir.pwd}/src/", 'images/opengraph', image_name)
     end
   end
+end
 
   def generate_image_url(site, path)
     host = ENV.fetch('URL', '') if netlify? && deploy_production?
@@ -47,8 +48,8 @@ class Opengraph < SiteBuilder
 
   def post_tags(post)
     tags = ''
-    post.data[:categories].each do |cat|
-      tags << cat.gsub(' ', '-') + ' '
+    post.data[:tags].each do |t|
+      tags << t.gsub(' ', '-') + ' '
     end
 
     tags

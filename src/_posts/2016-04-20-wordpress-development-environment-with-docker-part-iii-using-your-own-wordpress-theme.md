@@ -3,7 +3,8 @@ excerpt_separator: <!--readmore-->
 layout: post
 title: 'Wordpress Development Environment With Docker Part III Using Your Own Wordpress Theme'
 published_at: 2016-04-20T16:56:36+00:00
-categories: [code, wordpress]
+tags: [code, wordpress]
+category: blog
 permalink: /:title/
 author: jveillet
 ---

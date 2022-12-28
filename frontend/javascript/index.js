@@ -1,11 +1,26 @@
 
-import 'index.scss';
+import "index.css"
+import "utilities";
+import "alert";
+import "button";
+import "post";
+import "page";
+import "pagination";
+import "archive";
+import "author";
+import "footer";
+import "breadcrumb";
+import "tags";
 
-// Import all javascript files from src/_components
-const componentsContext = require.context('bridgetownComponents', true, /.js$/);
-componentsContext.keys().forEach(componentsContext);
+// Vendors
+import "prism.min.css";
 
-var PAGES = ['archives', 'styleguide', 'authors'];
+// Import all JavaScript & CSS files from src/_components
+import components from "bridgetownComponents/**/*.{js,jsx,js.rb,css}"
+
+console.info("Bridgetown is loaded!")
+
+var PAGES = ['archives', 'about-me'];
 
 /**
  * Add Click event on the Menu based on a selector.
@@ -126,4 +141,3 @@ document.onreadystatechange = function () {
 };
 
 import 'prism.min.js';
-import 'a11y-toggle.min.js';
