@@ -1,1 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" isolate="isolate" viewBox="0 0 500 500"><defs><clipPath id="a"><path d="M0 0h500v500H0z"/></clipPath></defs><g stroke="#FFF" stroke-miterlimit="3" stroke-width="50" clip-path="url(#a)"><ellipse cx="250" cy="250" fill="none" stroke-linecap="square" rx="214.5" ry="215"/><path stroke-linecap="round" d="M250 129v134M252 266l57 46"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" style="isolation:isolate" viewBox="0 0 500 500">
+  <defs>
+    <clipPath id="a">
+      <path d="M0 0h500v500H0z" />
+    </clipPath>
+  </defs>
+  <g stroke="#121212" stroke-miterlimit="3" stroke-width="50" clip-path="url(#a)">
+    <ellipse cx="250" cy="250" fill="none" stroke-linecap="square" rx="214.5" ry="215" />
+    <path stroke-linecap="round" d="M250 129v134M252 266l57 46" />
+  </g>
+</svg>
