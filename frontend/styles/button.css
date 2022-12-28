@@ -65,3 +65,8 @@ Description: Buttons  styles
   background-color: var(--button-primary-background-color);
   color: var(--button-primary-color);
 }
+
+.btn--secondary {
+  background-color: var(--button-secondary-background-color);
+  color: var(--button-secondary-color);
+}

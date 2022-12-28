@@ -207,24 +207,24 @@ h2 .post-title:visited {
   }
 
   .post-info-pubdate {
-    background-color: var(--orange-500);
+    background-color: var(--blue-200);
     border-radius: .25em;
     display: flex;
     align-items: center;
     flex-flow: row wrap;
     flex-direction: row;
     justify-content: flex-start;
-    padding: .3em;
+    padding: .3em .8em .3em .8em;
   }
 
   .post-pubdate-icon {
     height: 1em;
     width: 1em;
-    margin-right: .5em;
+    margin-right: .25em;
   }
 
   .post-pubdate {
-    color: var(--white-500);
+    color: var(--black-500);
     font-size: .8em;
     font-style: italic;
   }
