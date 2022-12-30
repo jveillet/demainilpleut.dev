@@ -254,6 +254,7 @@ h4 {
 
 p {
   line-height: calc(1ex / .32);
+  margin-bottom: 1rem;
 }
 
 button:focus {
