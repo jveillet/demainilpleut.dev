@@ -39,5 +39,5 @@ end
 
 group :development, :test do
   # Test your rendered HTML files to make sure they're accurate.
-  gem 'html-proofer', '~> 5.0', '>= 5.0.3'
+  gem 'html-proofer', '~> 5.0'
 end
