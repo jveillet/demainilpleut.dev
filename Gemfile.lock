@@ -120,7 +120,7 @@ GEM
       ruby-rc4
       ttfunk
     public_suffix (5.0.1)
-    puma (6.0.1)
+    puma (6.1.1)
       nio4r (~> 2.0)
     racc (1.6.2)
     rack (3.0.3)
@@ -161,7 +161,7 @@ DEPENDENCIES
   bridgetown (~> 1.1.0)
   bridgetown-feed (~> 2.0, >= 2.0.1)
   html-proofer (~> 5.0)
-  puma (~> 6.0)
+  puma (~> 6.1)
 
 BUNDLED WITH
    2.3.26
