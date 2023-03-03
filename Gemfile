@@ -32,10 +32,8 @@ gem "bridgetown", "~> 1.2.0"
 # (you can optionally limit this to the "development" group)
 gem "puma", "~> 6.1"
 
-group :bridgetown_plugins do
-  # A Bridgetown plugin to generate an Atom feed of your Bridgetown posts
-  gem 'bridgetown-feed', '~> 3.0'
-end
+# A Bridgetown plugin to generate an Atom feed of your Bridgetown posts
+gem 'bridgetown-feed', '~> 3.0'
 
 group :development, :test do
   # Test your rendered HTML files to make sure they're accurate.
