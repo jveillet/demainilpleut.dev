@@ -18,7 +18,7 @@
   "dependencies": {
     "canvas": "^2.11.0",
     "commander": "^10.0.0",
-    "concurrently": "^7.6.0",
+    "concurrently": "^8.0.1",
     "file-loader": "^6.2.0"
   }
 }
