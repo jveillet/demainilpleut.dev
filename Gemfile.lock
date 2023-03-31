@@ -119,7 +119,7 @@ GEM
       ruby-rc4
       ttfunk
     public_suffix (5.0.1)
-    puma (6.2.0)
+    puma (6.2.1)
       nio4r (~> 2.0)
     racc (1.6.2)
     rack (3.0.4.1)
