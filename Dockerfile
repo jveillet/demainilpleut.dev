@@ -1,4 +1,4 @@
-FROM ruby:3.2.1
+FROM ruby:3.2.2
 
 # Environment variables
 ENV DEBIAN_FRONTEND noninteractive
