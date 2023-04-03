@@ -16,7 +16,7 @@
     "postcss-preset-env": "^8.2.0"
   },
   "dependencies": {
-    "canvas": "^2.11.0",
+    "canvas": "^2.11.2",
     "commander": "^10.0.0",
     "concurrently": "^8.0.1",
     "file-loader": "^6.2.0"
