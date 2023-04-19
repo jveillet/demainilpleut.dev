@@ -11,12 +11,12 @@ class Builders::Opengraph < SiteBuilder
       image_name = "#{post_id(post)}.png"
       image_path = "#{dest_path }/#{image_name}"
       tags = post_tags(post)
-      date = post.data[:date]
+      date = post.data[:date].strftime('%Y-%m-%d')
 
       if !File.exist?(image_path)
-        system("node opengraph/index.js -t \"#{post.data[:title]}\" -a \"#{post.data[:author]}\" -f #{image_path} -l #{tags} -d #{date}")
+        system("./bin/opengraph generate -t \"#{post.data[:title]}\" -a \"#{post.data[:author]}\" -f \"#{image_path}\" -l \"#{tags}\" -d \"#{date}\"")
       elsif force?
-        system("node opengraph/index.js -t \"#{post.data[:title]}\" -a \"#{post.data[:author]}\" -f #{image_path} -l #{tags} -d #{date}")
+        system("./bin/opengraph generate -t \"#{post.data[:title]}\" -a \"#{post.data[:author]}\" -f \"#{image_path}\" -l \"#{tags}\" -d \"#{date}\"")
       end
 
       # Add the OpenGraph image URL into the post data to be available in templates
