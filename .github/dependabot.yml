@@ -3,18 +3,23 @@ updates:
 - package-ecosystem: npm
   directory: "/"
   schedule:
-    interval: daily
+    interval: weekly
     time: "09:00"
+    day: "monday"
     timezone: Europe/Paris
   open-pull-requests-limit: 10
 - package-ecosystem: bundler
   directory: "/"
   schedule:
-    interval: daily
+    interval: weekly
     time: "09:00"
+    day: "monday"
     timezone: Europe/Paris
   open-pull-requests-limit: 10
 - package-ecosystem: "docker"
   directory: "/"
   schedule:
-    interval: "weekly"
+    interval: weekly
+    time: "09:00"
+    day: "monday"
+    timezone: Europe/Paris
