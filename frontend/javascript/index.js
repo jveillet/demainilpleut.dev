@@ -1,22 +1,22 @@
 
-import "index.css"
-import "utilities";
-import "alert";
-import "button";
-import "post";
-import "page";
-import "pagination";
-import "archive";
-import "author";
-import "footer";
-import "breadcrumb";
-import "tags";
+import "$styles/index.css"
+import "$styles/utilities";
+import "$styles/alert";
+import "$styles/button";
+import "$styles/post";
+import "$styles/page";
+import "$styles/pagination";
+import "$styles/archive";
+import "$styles/author";
+import "$styles/footer";
+import "$styles/breadcrumb";
+import "$styles/tags";
 
 // Vendors
-import "prism.min.css";
+import "$styles/prism.min.css";
 
 // Import all JavaScript & CSS files from src/_components
-import components from "bridgetownComponents/**/*.{js,jsx,js.rb,css}"
+import components from "$components/**/*.{js,jsx,js.rb,css}"
 
 console.info("Bridgetown is loaded!")
 
@@ -140,4 +140,4 @@ document.onreadystatechange = function () {
     }
 };
 
-import 'prism.min.js';
+import './prism.min.js';
