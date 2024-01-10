@@ -18,7 +18,7 @@ GEM
       public_suffix (>= 2.0.2, < 6.0)
     afm (0.2.2)
     amazing_print (1.5.0)
-    async (2.6.3)
+    async (2.8.0)
       console (~> 1.10)
       fiber-annotation
       io-event (~> 1.1)
@@ -61,7 +61,7 @@ GEM
     colorator (1.1.0)
     concurrent-ruby (1.2.2)
     connection_pool (2.4.1)
-    console (1.21.0)
+    console (1.23.3)
       fiber-annotation
       fiber-local
     csv (3.2.8)
@@ -70,13 +70,12 @@ GEM
     erubi (1.12.0)
     ethon (0.16.0)
       ffi (>= 1.15.0)
-    faraday (2.8.1)
-      base64
-      faraday-net_http (>= 2.0, < 3.1)
-      ruby2_keywords (>= 0.0.4)
+    faraday (2.9.0)
+      faraday-net_http (>= 2.0, < 3.2)
     faraday-follow_redirects (0.3.0)
       faraday (>= 1, < 3)
-    faraday-net_http (3.0.2)
+    faraday-net_http (3.1.0)
+      net-http
     ffi (1.16.3)
     fiber-annotation (0.2.0)
     fiber-local (1.0.0)
@@ -94,7 +93,7 @@ GEM
       zeitwerk (~> 2.5)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
-    io-event (1.2.3)
+    io-event (1.4.1)
     kramdown (2.4.0)
       rexml
     kramdown-parser-gfm (1.1.0)
@@ -105,10 +104,22 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.10)
     minitest (5.20.0)
     mutex_m (0.2.0)
+    net-http (0.4.1)
+      uri
     nio4r (2.7.0)
-    nokogiri (1.15.3-x86_64-linux)
+    nokogiri (1.16.0-aarch64-linux)
       racc (~> 1.4)
-    pdf-reader (2.11.0)
+    nokogiri (1.16.0-arm-linux)
+      racc (~> 1.4)
+    nokogiri (1.16.0-arm64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.16.0-x86-linux)
+      racc (~> 1.4)
+    nokogiri (1.16.0-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.16.0-x86_64-linux)
+      racc (~> 1.4)
+    pdf-reader (2.12.0)
       Ascii85 (~> 1.0)
       afm (~> 0.2.1)
       hashery (~> 2.0)
@@ -117,7 +128,7 @@ GEM
     public_suffix (5.0.4)
     puma (6.4.2)
       nio4r (~> 2.0)
-    racc (1.7.1)
+    racc (1.7.3)
     rack (3.0.8)
     rainbow (3.1.1)
     rake (13.1.0)
@@ -138,14 +149,20 @@ GEM
     tilt (2.3.0)
     timers (4.3.5)
     ttfunk (1.7.0)
-    typhoeus (1.4.0)
+    typhoeus (1.4.1)
       ethon (>= 0.9.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
+    uri (0.13.0)
     yell (2.2.2)
     zeitwerk (2.6.12)
 
 PLATFORMS
+  aarch64-linux
+  arm-linux
+  arm64-darwin
+  x86-linux
+  x86_64-darwin
   x86_64-linux
 
 DEPENDENCIES
@@ -155,4 +172,4 @@ DEPENDENCIES
   puma (~> 6.4)
 
 BUNDLED WITH
-   2.3.26
+   2.5.3
