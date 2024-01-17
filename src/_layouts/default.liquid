@@ -19,8 +19,8 @@
     {% if page.author %}
       <meta name="twitter:creator" content="@{{ page.author }}">
       <meta name="twitter:title" content="{{ page.title }}">
-      {% if page.summary %}
-        <meta name="twitter:description" content="{{ page.summary }}">
+      {% if page.data.summary %}
+        <meta name="twitter:description" content="{{ page.data.summary | strip_html }}">
       {% else %}
         <meta name="twitter:description" content="{{ site.metadata.tagline }}">
       {% endif %}
