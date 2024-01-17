@@ -81,7 +81,7 @@ Try to build this project, it should be fast as there are no external dependenci
 
 ```bash
 $ cargo build
-Compiling kt v0.1.0 (/Users/jeremie/Development/kitty)
+Compiling kt v0.1.0 (/Users/jeremie/Development/kt)
 Finished dev [unoptimized + debuginfo] target(s) in 2.82s
 ```
 
