@@ -38,14 +38,14 @@ bundle install && yarn install
 
 ```sh
 cd demainilpleut.dev/
-docker-compose build && docker-compose up
+docker compose build && docker compose up
 ```
 
 ## Development
 
 To start your site in development mode, run `bin/bridgetown start` and navigate to [localhost:4000](https://localhost:4000/)!
 
-The same applies to the Docker installation, run `docker-compose up` and the website is available at the same address.
+The same applies to the Docker installation, run `docker compose up` and the website is available at the same address.
 
 ### Commands
 
@@ -78,7 +78,7 @@ You can run them manually via command line:
 Or with Docker:
 
 ```bash
-docker-compose run --rm web bin/cibuild.sh
+docker compose run --rm web bin/cibuild.sh
 ```
 
 ## Contributing
