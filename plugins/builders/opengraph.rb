@@ -8,15 +8,16 @@ class Builders::Opengraph < SiteBuilder
     generator do
       site.collections.posts.resources.each do |post|
       dest_path = "#{Dir.pwd}/src/images/opengraph"
+      logo_path = "#{Dir.pwd}/src/images/opengraph_logo.png"
+      background_path = "#{Dir.pwd}/src/images/opengraph_template_v3.png"
       image_name = "#{post_id(post)}.png"
       image_path = "#{dest_path }/#{image_name}"
-      tags = post_tags(post)
       date = post.data[:date].strftime('%Y-%m-%d')
 
       if !File.exist?(image_path)
-        system("./bin/opengraph generate -t \"#{post.data[:title]}\" -a \"#{post.data[:author]}\" -f \"#{image_path}\" -l \"#{tags}\" -d \"#{date}\"")
+        system("./bin/opengraph generate -t \"#{post.data[:title]}\" -a \"#{post.data[:author]}\" -o \"#{image_path}\" -b \"#{background_path}\" -l \"#{logo_path}\" -d \"#{date}\"")
       elsif force?
-        system("./bin/opengraph generate -t \"#{post.data[:title]}\" -a \"#{post.data[:author]}\" -f \"#{image_path}\" -l \"#{tags}\" -d \"#{date}\"")
+        system("./bin/opengraph generate -t \"#{post.data[:title]}\" -a \"#{post.data[:author]}\" -o \"#{image_path}\" -b \"#{background_path}\" -l \"#{logo_path}\" -d \"#{date}\"")
       end
 
       # Add the OpenGraph image URL into the post data to be available in templates
