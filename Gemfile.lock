@@ -119,7 +119,7 @@ GEM
     minitest (5.25.1)
     net-http (0.4.1)
       uri
-    nio4r (2.7.3)
+    nio4r (2.7.4)
     nokogiri (1.16.7-aarch64-linux)
       racc (~> 1.4)
     nokogiri (1.16.7-arm-linux)
@@ -139,7 +139,7 @@ GEM
       ruby-rc4
       ttfunk
     public_suffix (6.0.1)
-    puma (6.4.3)
+    puma (6.5.0)
       nio4r (~> 2.0)
     racc (1.8.1)
     rack (3.1.7)
@@ -189,7 +189,7 @@ DEPENDENCIES
   bridgetown (~> 1.3.4)
   bridgetown-feed (~> 3.1)
   html-proofer (~> 5.0)
-  puma (~> 6.4)
+  puma (~> 6.5)
 
 BUNDLED WITH
    2.5.16
