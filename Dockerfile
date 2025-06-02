@@ -1,7 +1,7 @@
 FROM ruby:3.4.4
 
 # Environment variables
-ENV DEBIAN_FRONTEND noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
 ENV NODE_MAJOR=20
 
 # Added the new NodeSource installation method for NodeJS
