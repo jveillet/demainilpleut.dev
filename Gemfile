@@ -33,7 +33,7 @@ gem "bridgetown", "~> 1.3.4"
 gem "puma", "~> 7.0"
 
 # A Bridgetown plugin to generate an Atom feed of your Bridgetown posts
-gem 'bridgetown-feed', '~> 3.1'
+gem 'bridgetown-feed', '~> 4.0'
 
 group :development, :test do
   # Test your rendered HTML files to make sure they're accurate.
