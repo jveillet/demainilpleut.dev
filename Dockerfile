@@ -19,7 +19,7 @@ RUN apt-get update -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Yarn globally
-RUN npm install --global yarn
+# RUN npm install --global yarn
 
 RUN mkdir -p /app
 
@@ -31,10 +31,11 @@ COPY Gemfile* ./
 RUN bundle config
 RUN bundle install --jobs 4 --retry 3
 
-COPY package.json yarn.lock ./
+# COPY package.json yarn.lock ./
+COPY package.json package-lock.json ./
 
-# Install local Yarn dependencies
-RUN yarn install
+# Install local npm dependencies
+RUN npm install
 
 EXPOSE 4000
 EXPOSE 4001

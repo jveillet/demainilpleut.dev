@@ -8,12 +8,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js 20.x
-      uses: actions/setup-node@v3
+    - uses: actions/checkout@v5
+    - name: Use Node.js 22.x
+      uses: actions/setup-node@v6
       with:
-        node-version: '20'
-        cache: 'yarn'
+        node-version: '22'
     - name: Set up Ruby 3
       uses: ruby/setup-ruby@v1
       with:
@@ -24,7 +23,7 @@ jobs:
         sudo apt-get -yqq install patch zlib1g-dev liblzma-dev libffi-dev libssl-dev libcurl4-gnutls-dev libxslt-dev
         bundle config path vendor/bundle
         bundle install --jobs 4 --retry 3
-        yarn install
+        npm install
         bin/cibuild.sh
       env:
         BRIDGETOWN_ENV: test
