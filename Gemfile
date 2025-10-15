@@ -28,14 +28,13 @@ gem "bridgetown", "~> 1.3.4"
 # of your HTML or XML resources:
 # gem "nokogiri", "~> 1.13"
 
-# Puma is a Rack-compatible server used by Bridgetown
-# (you can optionally limit this to the "development" group)
-gem "puma", "~> 7.0"
-
 # A Bridgetown plugin to generate an Atom feed of your Bridgetown posts
 gem 'bridgetown-feed', '~> 4.0'
 
 group :development, :test do
   # Test your rendered HTML files to make sure they're accurate.
   gem 'html-proofer', '~> 5.0'
+  # Puma is a Rack-compatible server used by Bridgetown
+  # (you can optionally limit this to the "development" group)
+  gem "puma", "< 7"
 end

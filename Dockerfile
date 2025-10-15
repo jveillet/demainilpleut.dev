@@ -2,16 +2,10 @@ FROM ruby:3.4.7
 
 # Environment variables
 ENV DEBIAN_FRONTEND=noninteractive
-ENV NODE_MAJOR=20
+ENV NODE_MAJOR=22
 
-# Added the new NodeSource installation method for NodeJS
-RUN mkdir -p /etc/apt/keyrings
-RUN curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
-RUN echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | tee /etc/apt/sources.list.d/nodesource.list
-
-# Yarn installation using debian repository
-RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
-RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+# Install NodeJS from NodeSource (LTS)
+RUN curl -fsSL https://deb.nodesource.com/setup_${NODE_MAJOR}.x | bash -
 
 RUN apt-get update -y \
     && apt-get install -y \
@@ -21,11 +15,11 @@ RUN apt-get update -y \
     libxml2-dev \
     libcurl4-gnutls-dev \
     nodejs \
-    yarn \
     libnotify-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# RUN gem install bundler --no-document
+# Install Yarn globally
+RUN npm install --global yarn
 
 RUN mkdir -p /app
 
