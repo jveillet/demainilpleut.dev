@@ -140,4 +140,4 @@ document.onreadystatechange = function () {
     }
 };
 
-import './prism.min.js';
+import './prism.min.cjs';
