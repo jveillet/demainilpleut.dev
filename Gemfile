@@ -33,7 +33,7 @@ gem 'bridgetown-feed', '~> 4.0'
 
 group :development, :test do
   # Test your rendered HTML files to make sure they're accurate.
-  gem 'html-proofer', '~> 5.0'
+  gem 'html-proofer', '~> 5.1'
   # Puma is a Rack-compatible server used by Bridgetown
   # (you can optionally limit this to the "development" group)
   gem "puma", "< 7"
