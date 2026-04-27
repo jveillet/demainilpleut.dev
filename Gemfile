@@ -36,5 +36,5 @@ group :development, :test do
   gem 'html-proofer', '~> 5.2'
   # Puma is a Rack-compatible server used by Bridgetown
   # (you can optionally limit this to the "development" group)
-  gem "puma", "< 8"
+  gem "puma", "< 9"
 end
