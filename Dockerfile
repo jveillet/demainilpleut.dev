@@ -42,4 +42,4 @@ EXPOSE 4000
 EXPOSE 4001
 EXPOSE 4002
 
-CMD ["bin/bridgetown", "start", "--host", "0.0.0.0"]
+CMD ["bin/bridgetown", "start", "--bind", "0.0.0.0"]
