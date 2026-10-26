@@ -1,4 +1,4 @@
-FROM ruby:4.0.6
+FROM ruby:4.0.8
 
 # Environment variables
 ENV DEBIAN_FRONTEND=noninteractive
